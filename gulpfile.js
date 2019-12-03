@@ -1,10 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-
-gulp.task('hello', function(done) {
-    console.log('Привет, Мир!');
-    done();
-});
+var css = require('gulp-mini-css');
 
 // Static server
 gulp.task('browser-sync', function() {
@@ -14,4 +10,11 @@ gulp.task('browser-sync', function() {
         }
     });
     gulp.watch("./*.html").on('change', browserSync.reload);
+});
+
+//gulp css min
+gulp.task('css', function(){
+    gulp.src(dest+'/*.css')
+        .pipe(css({ext:'-min.css'}))
+        .pipe(gulp.dest(dest));
 });
