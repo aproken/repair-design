@@ -1,7 +1,6 @@
-var {src, dest, watch} = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var css = require('gulp-mini-css');
+const {src, dest, watch} = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 
 // Static server
 function bs() {
@@ -11,9 +10,9 @@ function bs() {
             baseDir: "./"
         }
     });
-    gulp.watch("./*.html").on('change', browserSync.reload);
-    gulp.watch("./sass/**/*.sass", serveSass);
-    gulp.watch("./js/*.js").on('change', browserSync.reload);
+    watch("./*.html").on('change', browserSync.reload);
+    watch("./sass/**/*.sass", serveSass);
+    watch("./js/*.js").on('change', browserSync.reload);
 };
 
 //Compile sass into CSS & auto-inject into browsers
@@ -25,9 +24,3 @@ function serveSass() {
 };
 
 exports.serve = bs;
-//gulp css min
-gulp.task('css', function(){
-    gulp.src(dest+'/*.css')
-        .pipe(css({ext:'-min.css'}))
-        .pipe(gulp.dest(dest));
-});
