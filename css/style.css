@@ -331,6 +331,11 @@ template {
   margin: auto; }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: #131313; }
 
 .navbar {
@@ -358,6 +363,7 @@ template {
 
 .hero {
   position: relative;
+  padding-top: 100px;
   background: #131313 url("../images/hero-bg.jpg") no-repeat;
   background-position: center;
   background-size: cover;
