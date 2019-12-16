@@ -361,6 +361,9 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
+img {
+  max-width: 100%; }
+
 .section-title {
   display: flex;
   flex-direction: column;
@@ -368,7 +371,8 @@ body {
   text-transform: uppercase;
   color: #131313;
   font-family: 'Yeseva One', cursive;
-  font-size: 1.42rem; }
+  font-size: 1.42rem;
+  padding-bottom: 2.21rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -515,6 +519,58 @@ body {
   .title--primary {
     color: #E3B873; }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -8rem;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  color: #363636;
+  font-family: Yeseva One, cursive;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 1.28rem;
+  line-height: 1.78rem;
+  padding: 25px 0 13px 34px;
+  margin: 0; }
+
+.card__list {
+  margin: 0;
+  padding: 0 0 4rem 3.5rem; }
+
+.card__item {
+  color: #959595;
+  font-family: Futura Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.07;
+  line-height: 1.75rem; }
+
+.card__sticker {
+  position: absolute;
+  left: 0;
+  bottom: -1.8rem;
+  max-width: 16.28rem;
+  font-family: Yeseva One, cursive;
+  font-size: 1.28rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  padding: 1.21rem 1.32rem; }
+
 @media screen and (max-width: 1260px) {
   html {
     font-size: 12px; }
@@ -534,16 +590,16 @@ body {
     margin-left: 0; }
   .hero__title {
     max-width: 24.21rem;
-    line-height: 132.83%;
-    font-size: 1.64rem;
+    line-height: 138%;
+    font-size: 1.8rem;
+    letter-spacing: 0.02rem;
     margin-bottom: 1.14rem; }
   .hero__text {
-    max-width: 22.6rem;
+    max-width: 23.4rem;
     font-family: Futura Book;
     font-size: 1.28rem;
-    font-style: normal;
-    font-weight: lighter;
     line-height: 132.83%;
+    letter-spacing: 0.02rem;
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
