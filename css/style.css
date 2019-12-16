@@ -481,7 +481,7 @@ body {
     background-position: center;
     width: 2.14rem;
     height: 2.14rem;
-    border: 0.14px solid #E3B873;
+    border: 0.142rem solid #E3B873;
     border-radius: 50%;
     margin-left: 0.857rem; }
   .scroll-down__link {
@@ -505,12 +505,43 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1260px) {
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .nav__item {
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 930px) {
+  .nav {
+    display: none; } }
 
 @media screen and (max-width: 576px) {
   .hero__instagram {
     display: none; }
   .hero__contant {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .hero__title {
+    max-width: 24.21rem;
+    line-height: 132.83%;
+    font-size: 1.64rem;
+    margin-bottom: 2.28rem; }
+  .hero__text {
+    max-width: 23.64rem;
+    line-height: 135.84%;
+    font-size: 1.28rem; }
+  .hero__button {
+    display: block;
+    min-width: 23.64rem;
+    margin-bottom: 1.85rem; }
+  .hero__scroll-down {
+    display: none; }
+  .contacts__phone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; } }
+
+@media screen and (max-height: 558px) {
+  .hero__scroll-down {
+    display: none; } }
