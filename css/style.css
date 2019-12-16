@@ -318,14 +318,17 @@ template {
   display: none; }
 
 .button {
-  padding: 0.92rem 1.42rem;
+  padding: 0.79rem 1.63rem;
   border: none;
   border-radius: 0.14rem;
   text-transform: uppercase;
-  font-size: 0.94rem; }
+  font-family: Futura Demi;
+  font-size: 0.92rem;
+  font-weight: 500; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
+    padding: 1.3rem 1.79rem;
     color: #fff;
     background-color: #E3B873;
     box-shadow: 0px 0.35rem 1.07rem rgba(227, 184, 115, 0.2);
@@ -335,6 +338,7 @@ template {
       color: #fff;
       background-color: #E2A542; }
   .button--outline {
+    padding: 1.3rem 3rem;
     border: 0.07rem solid #fff;
     background-color: transparent;
     color: #fff; }
@@ -391,6 +395,10 @@ body {
   padding: 1.71rem 0; }
 
 .navbar__brand {
+  font-family: Futura Demi;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.01rem;
   color: #E3B873;
   text-decoration: none;
   text-transform: uppercase; }
@@ -400,7 +408,7 @@ body {
   transition: color 0.2s;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 2.85rem; }
+  margin-right: 2.55rem; }
   .nav__item:hover {
     color: #E3B873; }
 
@@ -435,7 +443,9 @@ body {
     margin-left: 4.28rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 36rem; }
+    line-height: 2.14rem;
+    max-width: 36rem;
+    margin-bottom: 3.9rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -511,13 +521,15 @@ body {
   .nav__item {
     margin-right: 1rem; } }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 996px) {
   .nav {
     display: none; } }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 930px) {
   .hero__instagram {
-    display: none; }
+    display: none; } }
+
+@media screen and (max-width: 576px) {
   .hero__contant {
     margin-left: 0; }
   .hero__title {
@@ -531,7 +543,8 @@ body {
     font-size: 1.28rem; }
   .hero__button {
     display: block;
-    min-width: 23.64rem;
+    width: 100%;
+    max-width: 30rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
