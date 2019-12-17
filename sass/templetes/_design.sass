@@ -1,0 +1,55 @@
+.design
+  background: $dark
+  &__section-title
+    color: $light
+    margin-top: 9rem
+  .card
+    &__text
+      position: relative
+      width: 84%
+      margin: -12.5rem 0 7rem 0
+      background: $light
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    &__title
+      color: $gray
+      font-family: Yeseva One, cursive;
+      font-style: normal;
+      font-weight: lighter;
+      font-size: 1.28rem
+      line-height: 1.78rem
+      padding: 1.75rem 0 0.57rem 2.42rem
+      margin: 0
+    &__list
+      margin: 0
+      padding: 0 0 4rem 3.5rem
+    &__item
+      color: $light-gray
+      font-family: Futura Book;
+      letter-spacing: 0.5px
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07
+      line-height: 1.75rem
+    &__sticker
+      position: absolute
+      left: 0
+      bottom: -2.4rem
+      font-family: Yeseva One, cursive;
+      font-weight: lighter
+      font-size: 1.28rem
+      text-align: center
+      text-transform: uppercase
+      color: $light
+      background-color: $primary
+      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+      padding: 1.21rem 3rem
+@media screen and ( min-width: 996px )
+  .design
+    background-color: $light
+    &__section-title
+      color: $dark
+    .card
+      &__text
+        margin: 0 auto
+        margin-top: -9.5rem
+        color: $dark

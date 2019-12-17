@@ -368,21 +368,32 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-transform: uppercase;
-  color: #131313;
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.42rem;
-  padding-bottom: 2.21rem; }
+  color: #131313; }
+  .section-title__heading {
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-size: 1.42rem;
+    padding-top: 3rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 5rem; }
     .section-title__image::before, .section-title__image::after {
       content: '';
       width: 2.28rem;
       height: 0.14rem;
       background-color: #E3B873;
       margin: 0 0.71rem; }
+  .section-title__description {
+    max-width: 29.0rem;
+    font-family: Futura Book;
+    font-weight: normal;
+    font-size: 1.42rem;
+    line-height: 1.92rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 3rem; }
 
 .header {
   position: fixed;
@@ -529,9 +540,9 @@ img {
 
 .card__text {
   position: relative;
-  max-width: 23.6rem;
+  width: 84%;
   margin: 0 auto;
-  margin-top: -8rem;
+  margin-top: -9.5rem;
   background: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
 
@@ -542,7 +553,7 @@ img {
   font-weight: lighter;
   font-size: 1.28rem;
   line-height: 1.78rem;
-  padding: 25px 0 13px 34px;
+  padding: 1.75rem 0 0.57rem 2.42rem;
   margin: 0; }
 
 .card__list {
@@ -552,6 +563,7 @@ img {
 .card__item {
   color: #959595;
   font-family: Futura Book;
+  letter-spacing: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.07;
@@ -560,16 +572,71 @@ img {
 .card__sticker {
   position: absolute;
   left: 0;
-  bottom: -1.8rem;
-  max-width: 16.28rem;
+  bottom: -2.4rem;
   font-family: Yeseva One, cursive;
+  font-weight: lighter;
   font-size: 1.28rem;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
   background-color: #E3B873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-  padding: 1.21rem 1.32rem; }
+  padding: 1.21rem 3rem; }
+
+.design {
+  background: #131313; }
+  .design__section-title {
+    color: #fff;
+    margin-top: 9rem; }
+  .design .card__text {
+    position: relative;
+    width: 84%;
+    margin: -12.5rem 0 7rem 0;
+    background: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .design .card__title {
+    color: #363636;
+    font-family: Yeseva One, cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1.28rem;
+    line-height: 1.78rem;
+    padding: 1.75rem 0 0.57rem 2.42rem;
+    margin: 0; }
+  .design .card__list {
+    margin: 0;
+    padding: 0 0 4rem 3.5rem; }
+  .design .card__item {
+    color: #959595;
+    font-family: Futura Book;
+    letter-spacing: 0.5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07;
+    line-height: 1.75rem; }
+  .design .card__sticker {
+    position: absolute;
+    left: 0;
+    bottom: -2.4rem;
+    font-family: Yeseva One, cursive;
+    font-weight: lighter;
+    font-size: 1.28rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #E3B873;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    padding: 1.21rem 3rem; }
+
+@media screen and (min-width: 996px) {
+  .design {
+    background-color: #fff; }
+    .design__section-title {
+      color: #131313; }
+    .design .card__text {
+      margin: 0 auto;
+      margin-top: -9.5rem;
+      color: #131313; } }
 
 @media screen and (max-width: 1260px) {
   html {
@@ -579,7 +646,11 @@ img {
 
 @media screen and (max-width: 996px) {
   .nav {
-    display: none; } }
+    display: none; }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 @media screen and (max-width: 930px) {
   .hero__instagram {
@@ -618,3 +689,24 @@ img {
 @media screen and (max-height: 558px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 1070px) {
+  .card__title {
+    padding: 1.75rem 0 0.57rem 1.42rem; }
+  .card__list {
+    padding: 0 0 4rem 2.5rem; }
+  .card__sticker {
+    padding: 1.21rem 2rem; } }
+
+@media screen and (max-width: 996px) {
+  .types__card {
+    margin-bottom: 9rem; }
+  .card__title {
+    font-size: 1.07rem;
+    padding: 1.75rem 0 0.57rem 2.42rem; }
+  .card__list {
+    padding: 0 0 4rem 3.5rem; }
+  .card__item {
+    font-size: 0.92rem; }
+  .card__text {
+    margin-left: 0; } }
