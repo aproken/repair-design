@@ -346,6 +346,45 @@ template {
       color: #E3B873;
       border: 0.07rem solid #E3B873; }
 
+.label--light {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Futura Book';
+  font-weight: 400;
+  font-size: 1.071rem;
+  line-height: 1.429rem; }
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  font-size: 1.285rem;
+  color: #fff;
+  padding: 0.5rem 0; }
+  .input::placeholder {
+    color: #fff;
+    font-family: 'Futura Book';
+    font-weight: 500;
+    font-size: 1.286rem; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url("../images/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  font-size: 1.143rem; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
+
 .container {
   width: 85%;
   max-width: 89.71rem;
@@ -636,6 +675,56 @@ img {
       margin: 0 auto;
       margin-top: -9.5rem;
       color: #131313; } }
+
+.modal {
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../images/bg-lines.svg") no-repeat;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #fff; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../images/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    max-width: 25.857rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 100;
+    font-size: 1.357rem;
+    line-height: 1.86rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.429rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 2.429rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.8rem; }
+  .modal__button {
+    align-self: flex-end; }
 
 @media screen and (max-width: 1260px) {
   html {

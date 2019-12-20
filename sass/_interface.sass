@@ -26,3 +26,43 @@
     &:hover
       color: $primary
       border: 0.07rem solid $primary
+.label
+  &--light
+      color: rgba($light, 0.5)
+      font-family: 'Futura Book'
+      font-weight: 400
+      font-size: 1.071rem
+      line-height: 1.429rem
+.input
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+  font-size: 1.285rem
+  color: $light
+  padding: 0.5rem 0
+  &::placeholder
+    color: $light
+    font-family: 'Futura Book'
+    font-weight: 500;
+    font-size: 1.286rem
+.policy
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked +
+      .policy__label
+        &::before
+          background: $primary url('../images/check.svg') no-repeat center / 0.8rem
+  &__label
+    display: flex
+    align-items: center
+    font-size: 1.143rem
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer
+      margin-right: 0.64rem
+  

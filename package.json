@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/aproken/web-start#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
