@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) {
     const modal = document.querySelector('.modal');
     const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -17,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
      * по нажатию выполняем `switcheModal`
      *
      */
-    document.onkeydown = function(evt) {
+    /*
+     document.onkeydown = function(evt) {
       evt = evt || window.event;
       var isEscape = false;
       if ("key" in evt) {
@@ -33,8 +35,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     closeBtn.addEventListener('click', switcheModal);
     modal.addEventListener('click', function (evt) {
         /* Если клик по outside то можно закрыть окно */
+ /*
         if (evt.target.classList.contains('modal--visible')){
            switcheModal()
         }
     });
+  });
+  */
+
+  $(document).ready(function() {
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close');
+
+    modalBtn.on('click', function() {
+        modal.toggleClass('modal--visible');
+        });
+    
+    closeBtn.on('click', function() {
+        modal.toggleClass('modal--visible');
+    });
+
   });
