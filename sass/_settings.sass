@@ -5,20 +5,75 @@ html
 body
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
+.scroll-up
+  position: fixed
+  visibility: hidden
+  z-index: 3
+  right: 0
+  bottom: 0
+  min-width: 17.64rem
+  min-height: 6.92rem
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $dark
+  &::after
+    content: ''
+    background: url('../images/arrow-down.svg') no-repeat
+    transform: rotate(180deg)
+    background-position: center
+    width: 2.14rem
+    height: 2.14rem
+    border: 0.142rem solid $primary
+    border-radius: 50%
+    margin-left: 0.857rem 
+  &__link
+    font-family: 'Yeseva One', cursive
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 0.857rem
+    line-height: 138.6%;
+    text-transform: uppercase
+    text-decoration: none
+    color: $light
 img
   max-width: 100%
 .section
+  &--dark
+    background-color: $dark
   &-title
     display: flex
     flex-direction: column
     align-items: center
     color: $dark
+    &--projects
+      align-items: flex-start
     &__heading
       font-family: 'Yeseva One', cursive
       text-transform: uppercase
       font-size: 1.43rem
       font-weight: 400
       padding-top: 3rem
+      &--primary
+        color: $primary
+        max-width: 19.8rem
+        font-weight: 100
+        font-size: 1.926rem
+        line-height: 2.623rem
+        letter-spacing: -0.07em;
+        &::after
+          display: inline-block
+          content: ''
+          width: 6.571rem
+          height: 0.14rem
+          background-color: $primary
+          margin: 0.714rem 0.714rem 0.714rem 2.757rem
+    &__text
+      color: $light
+      max-width: 31.57rem
+      font-weight: 400
+      font-size: 1.286rem
+      line-height: 2.071rem
     &__image
       display: flex
       justify-content: center

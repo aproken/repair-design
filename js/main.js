@@ -63,7 +63,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }) 
     
-    
+    modal.on('click', function(event) {
+        if (event.target.className === "modal modal--visible") {
+            modal.toggleClass('modal--visible'); 
+        }
+    });
+
+    $(window).on('scroll', function() {
+        if($(this).scrollTop()) {
+            $('.scroll-up').css("visibility", "visible");
+        } else {
+            $('.scroll-up').css("visibility", "hidden");
+        }
+    });
+
+    $('.scroll-up').on('click', function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1500);
+    });
     
 
   });
