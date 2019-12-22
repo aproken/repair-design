@@ -24,14 +24,21 @@
         color: $light
     &__close
         position: absolute
+        outline: none
         top: 0
         right: 0
         width: 28px
         height: 28px
         background: transparent url('../images/close.svg') no-repeat center 
+        background-size: cover
         border: none
         margin: 12px
-        cursor: pointer
+        &:hover
+            width: 30px
+            height: 30px
+            top: -1px
+            right: -1px
+            cursor: pointer
     &__title
         max-width: 25.857rem
         font-family: 'Yeseva One', cursive

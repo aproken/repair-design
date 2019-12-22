@@ -1,6 +1,7 @@
 .button
   padding: 0.79rem 1.63rem
   border: none
+  outline: none
   border-radius: 0.14rem
   text-transform: uppercase
   font-family: Futura Demi
@@ -40,6 +41,10 @@
   font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
+  &:focus
+    outline-offset: 3px
+    outline: 1px rgba($primary, 0.6) solid
+    box-shadow: 0px 0.35rem 1.07rem rgba($primary, 0.2)
   &::placeholder
     color: $light
     font-family: 'Futura Book'

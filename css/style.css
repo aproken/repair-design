@@ -320,6 +320,7 @@ template {
 .button {
   padding: 0.79rem 1.63rem;
   border: none;
+  outline: none;
   border-radius: 0.14rem;
   text-transform: uppercase;
   font-family: Futura Demi;
@@ -360,6 +361,10 @@ template {
   font-size: 1.285rem;
   color: #fff;
   padding: 0.5rem 0; }
+  .input:focus {
+    outline-offset: 3px;
+    outline: 1px rgba(227, 184, 115, 0.6) solid;
+    box-shadow: 0px 0.35rem 1.07rem rgba(227, 184, 115, 0.2); }
   .input::placeholder {
     color: #fff;
     font-family: 'Futura Book';
@@ -772,14 +777,21 @@ img {
     color: #fff; }
   .modal__close {
     position: absolute;
+    outline: none;
     top: 0;
     right: 0;
     width: 28px;
     height: 28px;
     background: transparent url("../images/close.svg") no-repeat center;
+    background-size: cover;
     border: none;
-    margin: 12px;
-    cursor: pointer; }
+    margin: 12px; }
+    .modal__close:hover {
+      width: 30px;
+      height: 30px;
+      top: -1px;
+      right: -1px;
+      cursor: pointer; }
   .modal__title {
     max-width: 25.857rem;
     font-family: 'Yeseva One', cursive;
