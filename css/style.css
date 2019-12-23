@@ -665,8 +665,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   color: white; }
-  .swiper-slide__image {
-    display: none; }
   .swiper-slide__text {
     flex-basis: 50%;
     margin-bottom: 1.42rem; }
@@ -978,8 +976,11 @@ img {
 @media screen and (max-width: 766px) {
   .row {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center; }
   .col__hidden {
-    display: none; }
-  .swiper-slide__images {
-    display: block; } }
+    display: none; } }
+
+@media screen and (min-width: 766px) {
+  .swiper-slide__image {
+    display: none; } }

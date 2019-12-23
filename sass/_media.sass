@@ -108,10 +108,12 @@
 @media screen and ( max-width: 766px )
   .row 
     flex-direction: column
+    justify-content: flex-start
     align-items: center
   .col__hidden
     display: none
+@media screen and ( min-width: 766px )
   .swiper
     &-slide
-      &__images
-        display: block
+      &__image
+        display: none
