@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
+       
 
     modalBtn.on('click', function() {
         modal.toggleClass('modal--visible');
@@ -82,6 +83,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
             scrollTop: 0
         }, 1500);
     });
+
+     //initialize swiper when document ready
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    })
     
+    var next = $('.swiper-button-next');
+    var prev = $('.swiper-button-prev');
+    var bullets = $('.swiper-pagination');
+
+    next.css('left', prev.width() + 10 + bullets.width() + 10);
+    bullets.css('left', prev.width() + 10);
 
   });

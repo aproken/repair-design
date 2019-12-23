@@ -25,3 +25,4 @@ function serveSass() {
 };
 
 exports.serve = bs;
+exports.sass = serveSass;

@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "gulp-mcss": "^1.0.2"
+    "gulp-mcss": "^1.0.2",
+    "swiper": "^5.2.1"
   }
 }
