@@ -1,10 +1,10 @@
-@media screen and ( max-width: 1260px )
+@media screen and (max-width: 1260px)
   html
     font-size: 12px
   .nav  
     &__item
       margin-right: 1rem
-@media screen and ( max-width: 992px )
+@media screen and (max-width: 992px)
   .nav
     display: none  
   .row
@@ -12,7 +12,7 @@
     justify-content: space-between
     align-items: flex-start
     flex-wrap: wrap
-    .col
+    .col-30
       flex-basis: 48%
       margin-right: 0.5rem 
       .card
@@ -27,39 +27,29 @@
           padding-bottom: 1rem 
         &__list
           font-size: 1.25rem
+          padding-left: 2.5rem
           margin-bottom: 3rem
-@media screen and ( max-width: 930px )
+  .section-title
+    &__text
+      max-width: 80%
+  .swiper
+    &-slide  
+      &__text
+        margin-bottom: 0
+@media screen and (max-width: 786px)
   .hero
     &__instagram
       display: none
-@media screen and ( max-width: 912px )
   .row
-    .col
+    .col-30
       .card
         &__title
-          font-size: 1.37rem
+          padding-left: 1rem
+          font-size: 1.23rem
         &__list
-          font-size: 1.2rem
-@media screen and ( max-width: 776px )
-  .row
-    .col
-      .card
-        &__title
-          font-size: 1.07rem
-        &__list
-          font-size: 1.02rem
-@media screen and ( max-width: 662px )
-  .row
-    display: flex
-    flex-direction: column
-    align-items: center 
-    .col
-      .card
-        &__title
-          font-size: 1.37rem
-        &__list
-          font-size: 1.2rem
-@media screen and ( max-width: 576px )
+          padding-left: 1rem
+          font-size: 1.215rem 
+@media screen and (min-width: 320px) and (max-width: 575px)
   .hero
     &__contant
       margin-left: 0 
@@ -90,30 +80,38 @@
       text-decoration: none
     &__button
       display: none
+  .row
+    display: flex
+    flex-direction: column
+    align-items: center 
+    .col-30
+      .card
+        &__title
+          font-size: 1.37rem
+        &__list
+          font-size: 1.2rem
+    .col-50 
+      width: 78%
+  .section-title
+    &--projects
+      align-items: center
+    &__heading
+      &--primary
+        text-align: center
+        &::after
+          display: none
+    &__text
+      text-align: center
+      padding: 1rem 0
+  .col__hidden
+    display: none
 @media screen and ( max-height: 558px )
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 1070px )
-  .card
-    &__title
-      padding: 1.75rem 0 0.57rem 1.42rem
-    &__list
-      padding: 0 0 4rem 2.5rem
-    &__sticker
-      padding: 1.21rem 2rem
-@media screen and ( max-width: 950px )
-  .section-title__text 
-    max-width: 25.57rem
-@media screen and ( max-width: 766px )
-  .row 
-    flex-direction: column
-    justify-content: flex-start
-    align-items: center
-  .col__hidden
-    display: none
-@media screen and ( min-width: 766px )
+@media screen and ( min-width: 576px )
   .swiper
     &-slide
       &__image
         display: none
+  
