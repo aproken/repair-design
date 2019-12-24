@@ -760,16 +760,15 @@ img {
   padding: 1.21rem 3rem; }
 
 .design {
-  background: #131313; }
+  background: white; }
   .design__section-title {
-    color: white;
+    color: #131313;
     margin-top: 9rem; }
   .design .card__image {
     width: 100%; }
   .design .card__text {
     position: relative;
     width: 84%;
-    margin: -12.5rem 0 7rem 0;
     background: white;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .design .card__title {
@@ -903,9 +902,9 @@ img {
   .swiper-slide__text {
     margin-bottom: 0; }
   .design {
-    background-color: white; }
+    background-color: #131313; }
     .design__section-title {
-      color: #131313; }
+      color: white; }
     .design .card__text {
       margin: 0 auto;
       margin-top: -9.5rem;
