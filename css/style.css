@@ -476,7 +476,7 @@ img {
     text-transform: uppercase;
     font-size: 1.43rem;
     font-weight: 400;
-    padding-top: 3rem; }
+    padding-top: 10rem; }
     .section-title__heading--primary {
       color: #E3B873;
       max-width: 19.8rem;
@@ -836,8 +836,7 @@ img {
 .design {
   background: white; }
   .design__section-title {
-    color: #131313;
-    margin-top: 9rem; }
+    color: #131313; }
   .design .card__image {
     width: 100%; }
   .design .card__text {
@@ -878,6 +877,46 @@ img {
     background-color: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
     padding: 1.21rem 3rem; }
+
+.footer-wrap {
+  background-color: #181818;
+  max-width: 53.07rem;
+  margin: auto;
+  padding: 2.5rem; }
+
+.footer__title {
+  color: white;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 100;
+  font-size: 1.426rem;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3.214rem; }
+
+.footer__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.footer__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.footer__input {
+  color: #131313; }
+
+.footer__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .footer__policy-label {
+    justify-content: center; }
+
+.footer__button {
+  padding: 1.286rem 4.786rem; }
 
 .modal {
   opacity: 0;
