@@ -49,3 +49,24 @@
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
   width: auto
   bottom: -0.143rem
+@media screen and (max-width: 992px)
+  .swiper
+      &-slide  
+        &__text
+          margin-bottom: 0
+@media screen and (max-width: 850px)
+  .section-title
+      &--projects
+        align-items: center
+  .row
+    .col__hidden
+          display: none
+@media screen and (max-width: 575px)
+  .row
+    .col__hidden
+      display: none
+@media screen and ( min-width: 851px )
+  .swiper
+    &-slide
+      &__image
+        display: none
