@@ -19,7 +19,7 @@
       background-color: rgba($dark, 0.8)
   &__text
     max-width: 40.79rem
-    font-size: 1.429rem
+    font-size: 1.47rem
     font-weight: 100
     line-height: 2.4rem
     text-align: center
@@ -53,14 +53,51 @@
       justify-content: center
   &__button
     padding: 1.286rem 4.786rem
+.control
+  &__label
+    font-size: 1.25rem
+.control
+  &__input
+    font-size: 1.5rem
 .video
   &__play
     position: relative
     margin: auto
-@media screen and (max-width: 600px)
+@media screen and (max-width: 648px)
   .control
     background-color: $dark
     color: $light
+    .control
+    &__video
+      margin-bottom: 2rem
+    &__text
+      max-width: 29rem
+      line-height: 169.8%
+      font-size: 1.169rem
+      margin-bottom: 1.71rem
+      &::before
+        margin-bottom: 1.53rem
     &__form
-      &__input-group
+      flex-direction: column
+    &__button
+      order: 1
+    &__policy-label 
+      justify-content: flex-start
+      margin-top: -3.8rem
+      font-size: 1.34rem
+  .label
+    &--dark
+      color: rgba($light, 0.5)
+  .control
+    &__input
+      font-size: 1.5rem
+      padding-bottom: 1rem
+      margin-bottom: 4.5rem
+      //&:last-child
+      //  margin-bottom: 1.82rem
+  .input    
+    &--dark
+      color: $light
+      border-bottom: 1px solid rgba($light, 0.8)
+      &::placeholder
         color: $light

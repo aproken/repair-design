@@ -1,9 +1,16 @@
 .footer
+  position: relative
+  background: $dark url("../images/footer-bg-black.jpg") no-repeat
+  background-size: cover
+  background-position: center
   &-wrap
+    position: relative
     background-color: $black
-    max-width: 53.07rem
+    max-width: 62.07rem
     margin: auto
+    //margin-top: -30rem
     padding: 2.5rem
+    margin-bottom: 4.3rem
   &__title
     color: $light
     font-family: 'Yeseva One', cursive
@@ -13,22 +20,51 @@
     text-align: center
     text-transform: uppercase
     margin-bottom: 3.214rem
+    margin-top: 0
   &__form
     display: flex
     justify-content: space-between
     flex-wrap: wrap
-    max-width: 55rem
+    max-width: 37.14rem
     margin: auto
   &__input-group
     display: flex
     flex-direction: column
-    flex-basis: 30%
+    flex-basis: 16.5rem
+    &--wide
+      flex-basis: 100%
+      margin-top: 3.3rem;
   &__input
     color: $dark
   &__policy
     flex-basis: 100%
-    margin-top: 1.2rem
+    margin-top: 1.9rem
+    color: $light
     &-label
       justify-content: center
   &__button
-    padding: 1.286rem 4.786rem
+    padding: 1.2rem 4.2rem
+    margin: 3.8rem auto 0 auto
+  &__navbar
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $dark
+    padding: 3.46rem 0
+  &__text
+    font-family: 'Yeseva One', cursive
+    font-style: normal
+    font-weight: normal
+    font-size: 1.43rem
+    line-height: 0.6rem
+    text-align: center
+    text-transform: uppercase
+    color: $primary
+  &__social
+    text-align: center
+    margin-top: 2.2rem
+  &__link
+    margin-right: 1rem
+  &__map
+    margin-top: 2rem
