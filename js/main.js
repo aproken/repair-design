@@ -107,4 +107,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     new WOW().init();
 
+    //Валидация форм
+    $('.modal__form, .footer__form, .control__form').validate({
+        errorClass: "invalid",
+        rules: {
+            // строчное правило
+            userName: {
+                required: true,
+                minlength: 2,
+            },
+            userPhone: "required",
+            // правило-объект (блок)
+            userEmail: {
+              required: true,
+              email: true
+            }
+        },
+        //сообщения
+        messages: {
+          userName: {
+            required: "Пожалуйста, введите имя",
+            minlength: "Пожалуйста, введите имя не короче двух символов",
+          },
+          userPhone: {
+            required: "Пожалуйста, введите телефон",
+            phone: "",
+          },
+          userEmail: {
+            required: "Пожалуйста, введите адрес электронной почты",
+            email: "Формат электронной почты: name@domain.com"
+          }
+        }
+    });
+
+    //маска телефона
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
   });

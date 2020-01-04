@@ -1022,7 +1022,7 @@ img {
       flex-basis: 100%;
       margin-top: 3.3rem; }
   .footer__input {
-    color: #131313; }
+    color: white; }
   .footer__policy {
     flex-basis: 100%;
     margin-top: 1.9rem;
@@ -1109,14 +1109,23 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2.429rem; }
-    .modal__input:last-of-type {
+    .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.8rem; }
   .modal__button {
     align-self: flex-end; }
+
+label.invalid {
+  padding-top: 0.7rem;
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 @media screen and (max-width: 1260px) {
   html {

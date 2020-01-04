@@ -188,11 +188,11 @@
                 <form action="#" class="form control__form">
                     <div class="control__input-group">
                         <label for="user-name" class="label form__label control__label label--dark">Имя</label>
-                        <input type="text" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут:"></input>
+                        <input type="text" name="userName" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут:"></input>
                     </div>
                     <div class="control__input-group">
                         <label for="user-phone" class="label form__label control__label label--dark">Телефон</label>
-                        <input type="tel" class="input form__input control__input input--dark" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                        <input type="tel" name="userPhone" class="input form__input control__input input--dark" id="user-phone" placeholder="Ваш номер телефона:"></input>
                     </div>
                     <button class="button button--primary control__button">Отправить</button>
                     <div class="policy control__policy">
@@ -372,11 +372,11 @@
                 <form action="#" class="form footer__form">
                     <div class="footer__input-group">
                         <label for="user-name" class="label form__label label--light">Имя</label>
-                        <input type="text" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
+                        <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
                     </div>
                     <div class="footer__input-group">
                         <label for="user-phone" class="label form__label label--light">Телефон</label>
-                        <input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                        <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
                     </div>
                     <div class="footer__input-group footer__input-group--wide">
                         <label for="user-question" class="label form__label label--light">Вопрос</label>
@@ -428,12 +428,18 @@
             <button class="modal__close"></button>
             <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
             <form action="#" class="form modal__form">
-                <label for="user-name" class="label form__label label--light">Имя</label>
-                <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
-                <label for="user-phone" class="label form__label label--light">Телефон</label>
-                <input type="tel" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
-                <label for="user-email" class="label form__label label--light">Email</label>
-                <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email"></input>
+                <div class="input-group modal__input-group">
+                    <label for="user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
+                </div>
+                <div class="input-group modal__input-group">
+                    <label for="user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                </div>
+                <div class="input-group modal__input-group">
+                    <label for="user-email" class="label form__label label--light">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email"></input>
+                </div>
                 <div class="policy modal__policy">
                     <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
                     <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
@@ -450,6 +456,8 @@
     </script>
     <script src="js/swiper.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>   
 </body>
 </html>

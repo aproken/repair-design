@@ -52,10 +52,20 @@
         display: flex
         flex-direction: column
     &__input
-        margin-bottom: 2.429rem
-        &:last-of-type
-            margin-bottom: 1rem
+        &-group
+            display: flex
+            flex-direction: column
+            margin-bottom: 2.429rem
+            &:last-of-type
+                margin-bottom: 1rem
     &__policy
         margin-bottom: 2.8rem
     &__button
         align-self: flex-end
+label
+    &.invalid
+        padding-top: 0.7rem
+        color: tomato
+input
+    &.invalid
+        border-bottom: 1px solid tomato
