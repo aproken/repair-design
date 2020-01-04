@@ -108,36 +108,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
     new WOW().init();
 
     //Валидация форм
-    $('.modal__form, .footer__form, .control__form').validate({
-        errorClass: "invalid",
-        rules: {
-            // строчное правило
-            userName: {
+    $('.modal__form, .footer__form, .control__form').each(function(index, item){
+        $(item).validate({
+            errorClass: "invalid",
+            rules: {
+                // строчное правило
+                userName: {
+                    required: true,
+                    minlength: 2,
+                },
+                userPhone: "required",
+                // правило-объект (блок)
+                userEmail: {
                 required: true,
-                minlength: 2,
+                email: true
+                }
             },
-            userPhone: "required",
-            // правило-объект (блок)
+            //сообщения
+            messages: {
+            userName: {
+                required: "Пожалуйста, введите имя",
+                minlength: "Пожалуйста, введите имя не короче двух символов",
+            },
+            userPhone: {
+                required: "Пожалуйста, введите телефон",
+                phone: "",
+            },
             userEmail: {
-              required: true,
-              email: true
+                required: "Пожалуйста, введите адрес электронной почты",
+                email: "Формат электронной почты: name@domain.com"
             }
-        },
-        //сообщения
-        messages: {
-          userName: {
-            required: "Пожалуйста, введите имя",
-            minlength: "Пожалуйста, введите имя не короче двух символов",
-          },
-          userPhone: {
-            required: "Пожалуйста, введите телефон",
-            phone: "",
-          },
-          userEmail: {
-            required: "Пожалуйста, введите адрес электронной почты",
-            email: "Формат электронной почты: name@domain.com"
-          }
-        }
+            }
+        })
     });
 
     //маска телефона
