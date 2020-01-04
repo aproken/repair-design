@@ -430,7 +430,7 @@ body {
   position: fixed;
   visibility: hidden;
   z-index: 3;
-  right: 0;
+  right: -5rem;
   bottom: 7rem;
   min-width: 17.64rem;
   min-height: 6.92rem;
