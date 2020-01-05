@@ -1,6 +1,8 @@
 .card
   &__image
       width: 100%
+      &--small
+        width: 5.43rem
   &__text
     position: relative
     width: 84%
@@ -17,6 +19,8 @@
     line-height: 1.78rem
     padding: 1.75rem 0 0.5rem 2.42rem
     margin: 0
+    &--no-padding
+      padding-top: 0
   &__list
     max-width: 97%
     font-family: 'Futura Book', sans-serif
@@ -41,3 +45,11 @@
     background-color: $primary
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
     padding: 1.21rem 3rem
+    &--clients
+      padding: 0 1.5rem
+    &--contant
+      display: flex
+      align-items: center
+    &--text
+      padding-left: 1rem
+      text-transform: none

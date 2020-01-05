@@ -522,9 +522,15 @@ img {
     text-align: center;
     margin: auto;
     padding-bottom: 3rem; }
+    .section-title__description--break {
+      width: 25.714rem; }
 
 .section--empty {
-  height: 15rem; }
+  background: white url("../images/clients/clients-bg.png");
+  background-repeat: repeat-x;
+  background-size: 51%;
+  background-position: bottom;
+  height: 25rem; }
 
 .header {
   position: fixed;
@@ -888,6 +894,8 @@ img {
 
 .card__image {
   width: 100%; }
+  .card__image--small {
+    width: 5.43rem; }
 
 .card__text {
   position: relative;
@@ -906,6 +914,8 @@ img {
   line-height: 1.78rem;
   padding: 1.75rem 0 0.5rem 2.42rem;
   margin: 0; }
+  .card__title--no-padding {
+    padding-top: 0; }
 
 .card__list {
   max-width: 97%;
@@ -933,6 +943,14 @@ img {
   background-color: #E3B873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   padding: 1.21rem 3rem; }
+  .card__sticker--clients {
+    padding: 0 1.5rem; }
+  .card__sticker--contant {
+    display: flex;
+    align-items: center; }
+  .card__sticker--text {
+    padding-left: 1rem;
+    text-transform: none; }
 
 .design {
   background: white; }
@@ -988,6 +1006,27 @@ img {
       margin: 0 auto;
       margin-top: -9.5rem;
       color: #131313; } }
+
+.clients__card {
+  position: relative;
+  background: white;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  padding: 1.714rem 2.2rem 1.429rem 2rem; }
+
+.clients__title {
+  display: flex;
+  align-items: center; }
+
+.clients__text {
+  font-weight: 100;
+  font-size: 1.071rem;
+  line-height: 180%;
+  color: #959595;
+  padding-top: 0.7rem;
+  padding-bottom: 3rem; }
+
+.clients__separat {
+  padding: 0 1.5rem; }
 
 .footer {
   position: relative;
