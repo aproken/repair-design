@@ -1,13 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="Refresh" content="3; url=http://aproken.ru/web-start/">
-  <title>Благодарность</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Refresh" content="3; url=http://aproken.ru/web-start/">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Repair Design Project</title>
 </head>
 <body>
-  <h1 style="text-align: center;">Спасибо за ваше обращение!</h1>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="brand navbar__brand">Repair Design Project</a>
+                <nav class="nav navbar__nav">
+                    <a href="#" class="nav__item">Главная</a>
+                    <a href="#" class="nav__item">Проекты</a>
+                    <a href="#" class="nav__item">Замер</a>
+                    <a href="#" class="nav__item">Команда</a>   
+                    <a href="#" class="nav__item">Отзывы</a>
+                    <a href="#" class="nav__item">Контакты</a>
+                </nav>
+                <div class="contacts navbar__contacts">
+                    <a href="+79997683299" class="phone contacts__phone">+7(999)768-32-99</a>
+                    <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>    
+                </div>
+            </div>    
+        </div>
+    </header><!-- /.header-->
+
+    <div class="main">
+        <section class="hero">
+            <div class="instagram hero__instagram">
+                <a href="#" class="instagram__link">Instagram</a>
+            </div>
+            <div class="container">
+                <div class="hero__contant">       
+                    <h1 class="title hero__title wow fadeInRight">Спасибо за ваше обращение!</h1>
+                    <p class="hero__text wow fadeInRight" data-wow-delay="0.1s">Наш менеджер свяжется с вами в ближайшее время</p>
+                    <a  href="http://aproken.ru/web-start/" class="button hero__button button--primary wow fadeIn" data-wow-delay="1.1s">Вернуться обратно</a>
+                </div><!-- /.hero__contant-->
+            </div><!-- /.container-->
+        </section>
+    </div><!-- /.main-->  
+    <div class="modal">
+        <div class="modal__dialog">
+            <button class="modal__close"></button>
+            <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
+            <form action="mail.php" method="POST" class="form modal__form">
+                <div class="input-group modal__input-group">
+                    <label for="user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
+                </div>
+                <div class="input-group modal__input-group">
+                    <label for="user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                </div>
+                <div class="input-group modal__input-group">
+                    <label for="user-email" class="label form__label label--light">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email"></input>
+                </div>
+                <div class="policy modal__policy">
+                    <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+                    <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <button class="button button--primary modal__button">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div class="scroll-up">
+        <a href="#" class="scroll-up__link"></a>
+    </div><!-- /.scroll-up-->
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script src="js/swiper.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/main.js"></script>   
 </body>
 </html>
