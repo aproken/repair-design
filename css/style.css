@@ -878,6 +878,8 @@ img {
     .control__form {
       flex-direction: column; }
     .control__button {
+      position: relative;
+      bottom: -5rem;
       order: 1; }
     .control__policy-label {
       justify-content: flex-start;
