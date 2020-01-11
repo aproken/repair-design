@@ -70,7 +70,7 @@ function buildHTML(done) {
 }
 
 function buildFonts(done) {
-    src('font/**/**.')
+    src('fonts/**/**')
         .pipe(dest('dist/fonts/'))
     done();
 }
