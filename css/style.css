@@ -321,6 +321,7 @@ template {
   padding: 0.79rem 1.63rem;
   border: none;
   outline: none;
+  text-decoration: none;
   border-radius: 0.14rem;
   text-transform: uppercase;
   font-family: Futura Demi;
@@ -877,6 +878,8 @@ img {
     .control__form {
       flex-direction: column; }
     .control__button {
+      position: relative;
+      bottom: -5rem;
       order: 1; }
     .control__policy-label {
       justify-content: flex-start;
