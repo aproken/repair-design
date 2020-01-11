@@ -522,8 +522,10 @@ img {
     text-align: center;
     margin: auto;
     padding-bottom: 3rem; }
-    .section-title__description--break {
-      width: 25.714rem; }
+    .section-title__description--width32rem {
+      max-width: 32rem; }
+    .section-title__description--width25rem {
+      max-width: 25.714rem; }
 
 .section--empty {
   background: white url("../images/clients/clients-bg.png");
@@ -896,6 +898,8 @@ img {
   width: 100%; }
   .card__image--small {
     width: 5.43rem; }
+  .card__image--size80 {
+    width: 80%; }
 
 .card__text {
   position: relative;
@@ -916,6 +920,14 @@ img {
   margin: 0; }
   .card__title--no-padding {
     padding-top: 0; }
+
+.card__subtitle {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #959595; }
 
 .card__list {
   max-width: 97%;
@@ -945,12 +957,32 @@ img {
   padding: 1.21rem 3rem; }
   .card__sticker--clients {
     padding: 0 1.5rem; }
+  .card__sticker--our-team {
+    left: 0;
+    top: 0;
+    bottom: 0; }
   .card__sticker--contant {
     display: flex;
     align-items: center; }
   .card__sticker--text {
     padding-left: 1rem;
     text-transform: none; }
+
+.card__sticker-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  background-color: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  padding: 0.7rem 0.8rem; }
+
+.card__sticker-bottom {
+  width: 100%;
+  color: white;
+  background-color: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  padding: 0.7rem 0.8rem; }
 
 .design {
   background: white; }
@@ -1007,6 +1039,11 @@ img {
       margin-top: -9.5rem;
       color: #131313; } }
 
+.our-team__card {
+  position: relative;
+  background: none;
+  padding: 1.714rem 2.2rem 1.429rem 2rem; }
+
 .clients__card {
   position: relative;
   background: white;
@@ -1027,6 +1064,14 @@ img {
 
 .clients__separat {
   padding: 0 1.5rem; }
+
+@media screen and (max-width: 1140px) {
+  .clients__card {
+    margin-bottom: 5rem; }
+  .clients__row {
+    flex-wrap: wrap; }
+  .clients__col-30 {
+    flex-basis: 50%; } }
 
 .footer {
   position: relative;

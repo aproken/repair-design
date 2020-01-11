@@ -1,8 +1,10 @@
 .card
   &__image
-      width: 100%
-      &--small
-        width: 5.43rem
+    width: 100%
+    &--small
+      width: 5.43rem
+    &--size80
+      width: 80%
   &__text
     position: relative
     width: 84%
@@ -21,6 +23,13 @@
     margin: 0
     &--no-padding
       padding-top: 0
+  &__subtitle
+    font-style: normal
+    font-weight: 100
+    font-size: 18px
+    line-height: 26px
+    text-align: center
+    color: $light-gray
   &__list
     max-width: 97%
     font-family: 'Futura Book', sans-serif
@@ -47,9 +56,27 @@
     padding: 1.21rem 3rem
     &--clients
       padding: 0 1.5rem
+    &--our-team
+      left: 0
+      top: 0
+      bottom: 0
     &--contant
       display: flex
       align-items: center
     &--text
       padding-left: 1rem
       text-transform: none
+  &__sticker-top
+    position: absolute
+    left: 0
+    top: 0
+    color: $light
+    background-color: $primary
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
+    padding: 0.7rem 0.8rem
+  &__sticker-bottom
+    width: 100%
+    color: $light
+    background-color: $primary
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
+    padding: 0.7rem 0.8rem
