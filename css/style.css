@@ -912,6 +912,11 @@ img {
   background: white;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__text--our-team {
+    position: relative;
+    width: 84%;
+    margin: 0 auto;
+    margin-top: -9.07rem;
+    background: white;
     margin-top: -6rem; }
 
 .card__title {
@@ -1083,6 +1088,21 @@ img {
     margin: 3rem auto;
     margin-bottom: 2.429rem; }
 
+@media screen and (max-width: 992px) {
+  .card__text--our-team {
+    position: relative;
+    margin-top: -9.07rem; }
+  .card__title--our-team {
+    font-size: 1.285rem; } }
+
+@media screen and (max-width: 575px) {
+  .our-team {
+    background-color: #131313; }
+    .our-team__section-title {
+      color: white; }
+    .our-team__text {
+      display: none; } }
+
 .clients__card {
   position: relative;
   background: white;
@@ -1114,11 +1134,7 @@ img {
 
 @media screen and (max-width: 575px) {
   .clients {
-    display: none; }
-  .our-team {
-    background-color: #131313; }
-    .our-team__text {
-      display: none; } }
+    display: none; } }
 
 .footer {
   position: relative;
