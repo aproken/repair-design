@@ -5,62 +5,31 @@ html
 body
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
-.scroll-up
-  position: fixed
-  visibility: hidden
-  z-index: 3
-  right: -5rem
-  bottom: 7rem
-  min-width: 17.64rem
-  min-height: 6.92rem
-  display: flex
-  justify-content: center
-  align-items: center
-  &::after
-    content: ''
-    background: url('../images/arrow-down.svg') no-repeat
-    transform: rotate(180deg)
-    background-size: 2rem
-    background-position: center
-    width: 5.14rem
-    height: 5.14rem
-    border: 0.142rem solid $primary
-    border-radius: 50%
-    margin-left: 0.857rem 
-  &__link
-    font-family: 'Yeseva One', cursive
-    font-style: normal;
-    font-weight: lighter;
-    font-size: 0.857rem
-    line-height: 138.6%;
-    text-transform: uppercase
-    text-decoration: none
-    color: $light
 img
   max-width: 100%
+
+//Секция
 .section
   &--dark
     background-color: $dark
-    padding-bottom: 20rem
+  &--empty
+    background: $light url("../images/clients/clients-bg.png") 
+    background-repeat: repeat-x
+    background-size: 51%
+    background-position: bottom
+    height: 25rem 
+
+  //Заголовок секции
   &-title
     display: flex
     flex-direction: column
     align-items: center
-    color: $dark
-    &--projects
-      align-items: flex-start
-    &--light
-      color: $light
-    &__heading
-      font-family: 'Yeseva One', cursive
-      text-transform: uppercase
-      font-size: 1.43rem
-      font-weight: 400
-      padding-top: 10rem
-      &--primary
+    &--strong
+        align-items: flex-start
         color: $primary
-        max-width: 19.8rem
-        font-weight: 100
+        max-width: 19.8rem 
+        font-family: 'Yeseva One', cursive
+        text-transform: uppercase
         font-size: 1.926rem
         line-height: 2.623rem
         letter-spacing: -0.07em;
@@ -72,13 +41,16 @@ img
           width: 6.571rem
           height: 0.14rem
           background-color: $primary
-          margin: 0.714rem 0.714rem 0.714rem 2.757rem
-    &__text
-      color: $light
-      max-width: 31.57rem
-      font-weight: 400
-      font-size: 1.286rem
-      line-height: 2.071rem
+          margin: -1.286rem 2.714rem 0.714rem 10.757rem;
+    &__heading
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      font-size: 1.43rem
+      font-weight: 100
+      &--main-dark
+        color: $dark
+      &--main-light
+        color: $light 
     &__image
       display: flex
       justify-content: center
@@ -103,10 +75,5 @@ img
         max-width: 32rem 
       &--width25rem
         max-width: 25.714rem 
-  &--empty
-    background: $light url("../images/clients/clients-bg.png") 
-    background-repeat: repeat-x
-    background-size: 51%
-    background-position: bottom
-    height: 25rem
+    
   

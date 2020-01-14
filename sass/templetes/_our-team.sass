@@ -1,4 +1,6 @@
 .our-team
+  &__contant
+    padding-top: 10rem
   &__card
     position: relative
     background: none
@@ -29,10 +31,12 @@
     &--our-team 
       font-size: 1.285rem
 @media screen and (max-width: 575px)
+  .section-title
+    &__heading
+      &--main-dark
+        color: $light
   .our-team
     background-color: $dark
-    &__section-title
-      color: $light
     &__text
       display: none
   

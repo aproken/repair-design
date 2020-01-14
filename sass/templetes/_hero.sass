@@ -62,35 +62,6 @@
       height: 0.07rem
       background-color: $primary
       margin-left: 0.57rem
-.scroll-down
-  position: absolute
-  z-index: 3
-  left: 0
-  bottom: 0
-  min-width: 17.64rem
-  min-height: 6.92rem
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: $dark
-  &::after
-    content: ''
-    background: url('../images/arrow-down.svg') no-repeat
-    background-position: center
-    width: 2.14rem
-    height: 2.14rem
-    border: 0.142rem solid $primary
-    border-radius: 50%
-    margin-left: 0.857rem 
-  &__link
-    font-family: 'Yeseva One', cursive
-    font-style: normal;
-    font-weight: lighter;
-    font-size: 0.857rem
-    line-height: 138.6%;
-    text-transform: uppercase
-    text-decoration: none
-    color: $light
 .title
   font-family: 'Yeseva One', cursive
   font-style: normal
@@ -101,6 +72,7 @@
   margin: 0
   &--primary
     color: $primary
+
 @media screen and (max-width: 786px)
   .hero
     &__instagram
@@ -127,8 +99,6 @@
       width: 100%
       max-width: 30rem
       margin-bottom: 1.85rem
-    &__scroll-down
-      display: none
   .contacts
     &__phone
       margin-right: 0
@@ -136,8 +106,5 @@
       text-decoration: none
     &__button
       display: none
-@media screen and ( max-height: 558px )
-  .hero
-    &__scroll-down
-      display: none
+
   

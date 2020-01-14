@@ -15,11 +15,11 @@
     <header class="header">
         <div class="container">
             <div class="navbar">
-                <a href="#" class="brand navbar__brand">Repair Design Project</a>
+                <a href="index.html" class="brand navbar__brand">Repair Design Project</a>
                 <nav class="nav navbar__nav">
-                    <a href="#" class="nav__item">Главная</a>
+                    <a href="index.html" class="nav__item">Главная</a>
                     <a href="#projects" class="nav__item">Проекты</a>
-                    <a href="#control" class="nav__item">Замер</a>
+                    <a href="#" class="nav__item">Замер</a>
                     <a href="#our-team" class="nav__item">Команда</a>   
                     <a href="#clients" class="nav__item">Отзывы</a>
                     <a href="#" class="nav__item">Контакты</a>
@@ -41,23 +41,25 @@
                 <div class="hero__contant">       
                     <h1 class="title hero__title wow fadeInRight">Турецкий ремонт в&nbsp;<span class="title--primary fadeInRight">Ростове-на-Дону</span></h1>
                     <p class="hero__text wow fadeInRight" data-wow-delay="0.1s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-                    <button class="button hero__button button--primary wow fadeIn" data-wow-delay="1.1s">Рассчитать стоимость</button>
-                    <button class="button hero__button button--outline wow fadeIn" data-wow-delay="1.9s">Отправить заявку</button>
+                    <button class="button hero__button button--primary wow fadeIn" data-wow-delay="1.1s" data-toggle="modal">Рассчитать стоимость</button>
+                    <button class="button hero__button button--outline wow fadeIn" data-wow-delay="1.9s" sdata-toggle="modal">Отправить заявку</button>
                 </div><!-- /.hero__contant-->
             </div><!-- /.container-->
             
-            <div class="scroll-down hero__scroll-down wow pulse" data-wow-delay="5s" data-wow-iteration="2"> 
-                <a href="#" class="scroll-down__link" id="projects">Листайте вниз</a>
-            </div><!-- /.hero__scroll-down-->
-        </section>
+            <div class="scroll-button scroll-button__down wow pulse" data-wow-delay="5s" data-wow-iteration="2"> 
+                <a href="#" class="scroll-button__link" id="projects">Листайте вниз</a>
+            </div><!-- /.scroll-button__down-->
+        </section><!-- /.hero-->
+
         <section class="section section--dark projects">
             <div class="container">
-                <div class="row row__projects">
+                <div class="row projects__contant">
                     <div class="col-50">
-                        <div class="section-title section-title--projects">
-                            <h2 class="section-title__heading section-title__heading--primary">Завершенные проекты</h2>
-                            <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За&nbsp;14 лет работы на строительном рынке мы осчастливили более&nbsp;1000&nbsp;семей</p>
+                        <div class="section-title section-title--strong">
+                            Завершенные проекты
                         </div><!-- /.section-title-->
+                        <p class="projects__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За&nbsp;14 лет работы на строительном рынке мы осчастливили более&nbsp;1000&nbsp;семей</p>
+                        
                         <!-- Slider main container -->
                         <div class="swiper-container">
                             <!-- Additional required wrapper -->
@@ -171,318 +173,330 @@
             </div>
             <!-- /.container -->
         </section>
+        
         <section class="section control" id="control">
             <div class="container">
-                <div class="section-title control__section-title section-title--light wow fadeInUp" data-wow-duration="1.7s"> 
-                    <h2 class="section-title__heading">Онлайн контроль</h2>
-                    <div class="section-title__image">
-                        <img src="images/video.svg" alt="">
+                <div class="control__contant">
+                    <div class="section-title"> 
+                        <h2 class="section-title__heading section-title__heading--main-light">Онлайн контроль</h2>
+                        <div class="section-title__image">
+                            <img src="images/video.svg" alt="">
+                        </div>
+                    </div><!--/.section-title-->
+
+                    <div class="control__video video">
+                        <a class="video__play" href="#"><img src="./images/play-icon.svg" alt="play"></a>
                     </div>
-                </div><!--/.section-title-->
-                <div class="control__video video">
-                    <img src="./images/play-icon.svg" alt="play" class="video__play">
-                </div>
-                <p class="control__text">
-                    На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы&nbsp;получить ссылку на трансляцию.
-                </p>
-                <form action="mail.php" method="POST" class="form control__form">
-                    <div class="control__input-group">
-                        <label for="user-name" class="label form__label control__label label--dark">Имя</label>
-                        <input type="text" name="userName" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут:"></input>
-                    </div>
-                    <div class="control__input-group">
-                        <label for="user-phone" class="label form__label control__label label--dark">Телефон</label>
-                        <input type="tel" name="userPhone" class="input form__input control__input input--dark" id="user-phone" placeholder="Ваш номер телефона:"></input>
-                    </div>
-                    <button class="button button--primary control__button">Отправить</button>
-                    <div class="policy control__policy">
-                        <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-                        <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
-                    </div>
-                </form>
+                    <p class="control__text">
+                        На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы&nbsp;получить ссылку на трансляцию.
+                    </p>
+                    <form action="mail.php" method="POST" class="form control__form">
+                        <div class="input-group control__input-group">
+                            <label for="control-user-name" class="label form__label control__label label--dark">Имя</label>
+                            <input type="text" name="userName" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:"></input>
+                        </div>
+                        <div class="control__input-group">
+                            <label for="control-user-phone" class="label form__label control__label label--dark">Телефон</label>
+                            <input type="tel" name="userPhone" class="input form__input control__input input--dark" id="control-user-phone" placeholder="Ваш номер телефона:"></input>
+                        </div>
+                        <button class="button button--primary control__button">Отправить</button>
+                        <div class="policy control__policy">
+                            <input type="checkbox" name="policy-checkbox" id="control-policy-checkbox" class="policy__checkbox" checked>
+                            <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+                        </div>
+                    </form>
+                </div><!-- /.control__contant -->
             </div><!-- /.container-->
-        </section>
+        </section><!-- /.control-->
+
         <section class="section types">
             <div class="container">
-                <div class="section-title wow fadeInUp" data-wow-duration="1.7s">
-                    <h2 class="section-title__heading">Виды ремонта</h2>
-                    <div class="section-title__image">
-                        <img src="images/types.svg" alt="">
-                    </div>
-                </div><!-- /.section-title-->
-                <div class="row">
-                    <div class="col-30">
-                        <div class="card types__card">
-                            <img src="./images/types/type-1.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Косметический ремонт</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Демонтаж старых покрытий</li>
-                                    <li class="card__item">Поклейка обоев</li>
-                                    <li class="card__item">Роспись стен и потолков</li>
-                                    <li class="card__item">Укладка полов</li>
-                                    <li class="card__item">Замена сантехники</li>
-                                    <li class="card__item">Замена розеток и выключателей</li>
-                                    <li class="card__item">Замена дверей</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    от 900 руб / m<sup>2</sup>
-                                </strong>
-                            </div>  
+                <div class="types__contant">
+                    <div class="section-title">
+                        <h2 class="section-title__heading section-title__heading--main-dark">Виды ремонта</h2>
+                        <div class="section-title__image">
+                            <img src="images/types.svg" alt="">
                         </div>
-                    </div>
-                    <div class="col-30">
-                        <div class="card types__card">
-                            <img src="./images/types/type-2.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Капитальный ремонт</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Демонтаж старых покрытий</li>
-                                    <li class="card__item">Поклейка обоев</li>
-                                    <li class="card__item">Роспись стен и потолков</li>
-                                    <li class="card__item">Укладка полов</li>
-                                    <li class="card__item">Замена сантехники</li>
-                                    <li class="card__item">Замена розеток и выключателей</li>
-                                    <li class="card__item">Замена дверей</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    от 1800 руб / m<sup>2</sup>
-                                </strong>
+                    </div><!-- /.section-title-->
+                    <div class="row">
+                        <div class="col-30">
+                            <div class="card types__card">
+                                <img src="./images/types/type-1.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Косметический ремонт</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Демонтаж старых покрытий</li>
+                                        <li class="card__item">Поклейка обоев</li>
+                                        <li class="card__item">Роспись стен и потолков</li>
+                                        <li class="card__item">Укладка полов</li>
+                                        <li class="card__item">Замена сантехники</li>
+                                        <li class="card__item">Замена розеток и выключателей</li>
+                                        <li class="card__item">Замена дверей</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        от 900 руб / m<sup>2</sup>
+                                    </strong>
+                                </div>  
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-30">
-                        <div class="card types__card">
-                            <img src="./images/types/type-3.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Дизайнерский ремонт</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Демонтаж старых покрытий</li>
-                                    <li class="card__item">Поклейка обоев</li>
-                                    <li class="card__item">Роспись стен и потолков</li>
-                                    <li class="card__item">Укладка полов</li>
-                                    <li class="card__item">Замена сантехники</li>
-                                    <li class="card__item">Замена розеток и выключателей</li>
-                                    <li class="card__item">Замена дверей</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    от 4000 руб / m<sup>2</sup>
-                                </strong>
+                        </div><!-- /.col-30 -->
+                        <div class="col-30">
+                            <div class="card types__card">
+                                <img src="./images/types/type-2.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Капитальный ремонт</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Демонтаж старых покрытий</li>
+                                        <li class="card__item">Поклейка обоев</li>
+                                        <li class="card__item">Роспись стен и потолков</li>
+                                        <li class="card__item">Укладка полов</li>
+                                        <li class="card__item">Замена сантехники</li>
+                                        <li class="card__item">Замена розеток и выключателей</li>
+                                        <li class="card__item">Замена дверей</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        от 1800 руб / m<sup>2</sup>
+                                    </strong>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div><!-- /.col-30 -->
+                        <div class="col-30">
+                            <div class="card types__card">
+                                <img src="./images/types/type-3.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Дизайнерский ремонт</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Демонтаж старых покрытий</li>
+                                        <li class="card__item">Поклейка обоев</li>
+                                        <li class="card__item">Роспись стен и потолков</li>
+                                        <li class="card__item">Укладка полов</li>
+                                        <li class="card__item">Замена сантехники</li>
+                                        <li class="card__item">Замена розеток и выключателей</li>
+                                        <li class="card__item">Замена дверей</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        от 4000 руб / m<sup>2</sup>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div><!-- /.col-30 -->
+                    </div><!-- /.row -->
+                </div><!-- /.types__contant -->
             </div><!-- /.container-->
         </section>
 
         <section class="section design">
             <div class="container">
-                <div class="section-title design__section-title wow fadeInUp" data-wow-duration="1.7s">
-                    <h2 class="section-title__heading">Дизайн проект</h2>
-                    <div class="section-title__image">
-                        <img src="images/design.svg" alt="Дизайн проект">
-                    </div>
-                    <p class="section-title__description wow fadeInUp" data-wow-duration="2s">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</p>
-                </div><!-- /.section-title-->
-                <div class="row">
-                    <div class="col-30">
-                        <div class="card design__card">
-                            <img src="./images/design/design-1.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Минимальный</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Измерительные чертежи</li>
-                                    <li class="card__item">Перепланировка</li>
-                                    <li class="card__item">Планировка мебели</li>
-                                    <li class="card__item">Сантехнический план</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    150 руб / m2
-                                </strong>
-                            </div>  
+                <div class="design__contant">
+                    <div class="section-title">
+                        <h2 class="section-title__heading section-title__heading--main-dark">Дизайн проект</h2>
+                        <div class="section-title__image">
+                            <img src="images/design.svg" alt="Дизайн проект">
                         </div>
-                    </div>
-                    <div class="col-30">
-                        <div class="card design__card">
-                            <img src="./images/design/design-2.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Стандартный</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Измерительные чертежи</li>
-                                    <li class="card__item">Перепланировка</li>
-                                    <li class="card__item">Планировка мебели</li>
-                                    <li class="card__item">План потолков</li>
-                                    <li class="card__item">План этажей</li>
-                                    <li class="card__item">План электрики</li>
-                                    <li class="card__item">План света</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    400 руб / m2
-                                </strong>
+                        <p class="section-title__description">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</p>
+                    </div><!-- /.section-title-->
+                    <div class="row">
+                        <div class="col-30">
+                            <div class="card design__card">
+                                <img src="./images/design/design-1.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Минимальный</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Измерительные чертежи</li>
+                                        <li class="card__item">Перепланировка</li>
+                                        <li class="card__item">Планировка мебели</li>
+                                        <li class="card__item">Сантехнический план</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        150 руб / m2
+                                    </strong>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-30">
+                            <div class="card design__card">
+                                <img src="./images/design/design-2.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Стандартный</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Измерительные чертежи</li>
+                                        <li class="card__item">Перепланировка</li>
+                                        <li class="card__item">Планировка мебели</li>
+                                        <li class="card__item">План потолков</li>
+                                        <li class="card__item">План этажей</li>
+                                        <li class="card__item">План электрики</li>
+                                        <li class="card__item">План света</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        400 руб / m2
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-30">
+                            <div class="card design__card">
+                                <img src="./images/design/design-3.jpg" alt="" class="card__image">
+                                <div class="card__text">
+                                    <h3 class="card__title">Полный</h3>
+                                    <ul class="card__list">
+                                        <li class="card__item">Измерительные чертежи</li>
+                                        <li class="card__item">Перепланировка</li>
+                                        <li class="card__item">Планировка мебели</li>
+                                        <li class="card__item">План потолков</li>
+                                        <li class="card__item">План этажей</li>
+                                        <li class="card__item">План электрики</li>
+                                        <li class="card__item">План света</li>
+                                        <li class="card__item">Стенные развертки</li>
+                                        <li class="card__item">3D визуализация</li>
+                                        <li class="card__item">Смета на материалы </li>
+                                        <li class="card__item">Выезд на подбор материалов</li>
+                                        <li class="card__item">Выбор мебели</li>
+                                    </ul>
+                                    <strong class="card__sticker">
+                                        900 руб / m2
+                                    </strong>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-30">
-                        <div class="card design__card">
-                            <img src="./images/design/design-3.jpg" alt="" class="card__image">
-                            <div class="card__text">
-                                <h3 class="card__title">Полный</h3>
-                                <ul class="card__list">
-                                    <li class="card__item">Измерительные чертежи</li>
-                                    <li class="card__item">Перепланировка</li>
-                                    <li class="card__item">Планировка мебели</li>
-                                    <li class="card__item">План потолков</li>
-                                    <li class="card__item">План этажей</li>
-                                    <li class="card__item">План электрики</li>
-                                    <li class="card__item">План света</li>
-                                    <li class="card__item">Стенные развертки</li>
-                                    <li class="card__item">3D визуализация</li>
-                                    <li class="card__item">Смета на материалы </li>
-                                    <li class="card__item">Выезд на подбор материалов</li>
-                                    <li class="card__item">Выбор мебели</li>
-                                </ul>
-                                <strong class="card__sticker">
-                                    900 руб / m2
-                                </strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div><!-- /.design__contant -->
             </div><!-- /.container--
             </div<!-->
         </section>
         <section class="section our-team">
             <div class="container">
-                <div class="section-title our-team__section-title wow fadeInUp" data-wow-duration="1.7s">
-                    <h2 class="section-title__heading" id="our-team">Наша команда</h2>
-                    <div class="section-title__image">
-                        <img src="images/our-team.svg" alt="our-team">
+                <div class="our-team__contant">
+                    <div class="section-title section-title__heading--main-dark">
+                        <h2 class="section-title__heading" id="our-team">Наша команда</h2>
+                        <div class="section-title__image">
+                            <img src="images/our-team.svg" alt="our-team">
+                        </div>
+                        <p class="section-title__description section-title__description--width32rem"">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
+                    </div><!-- /.section-title-->
+                <div class="row our-team__row">
+                    <div class="col-30 our-team__col-30">
+                        <div class="card our-team__card">
+                            <strong class="card__sticker-top">
+                                <img src="./images/our-team/idea.svg" alt="sticker">
+                            </strong>
+                            <img src="./images/our-team/1.jpg" alt="photo" class="card__image card__image--size80">
+                            <div class="card__text card__text--our-team">
+                                <h3 class="card__title card__title--our-team">Алексей Колмаков</h3>
+                                <h4 class="card__subtitle">Проектный менеджер</h4>
+                                <h3 class="card__title card__title--our-team-orange">Опыт работы 8 лет</h3>
+                            </div> 
+                        </div>
                     </div>
-                    <p class="section-title__description section-title__description--width32rem wow fadeInUp" data-wow-duration="2s">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
-                </div><!-- /.section-title-->
-            <div class="row our-team__row">
-                <div class="col-30 our-team__col-30">
-                    <div class="card our-team__card">
-                        <strong class="card__sticker-top">
-                            <img src="./images/our-team/idea.svg" alt="sticker">
-                        </strong>
-                        <img src="./images/our-team/1.jpg" alt="photo" class="card__image card__image--size80">
-                        <div class="card__text card__text--our-team">
-                            <h3 class="card__title card__title--our-team">Алексей Колмаков</h3>
-                            <h4 class="card__subtitle">Проектный менеджер</h4>
-                            <h3 class="card__title card__title--our-team-orange">Опыт работы 8 лет</h3>
-                        </div> 
+                    <div class="col-30 our-team__col-30">
+                        <div class="card our-team__card">
+                            <strong class="card__sticker-top">
+                                <img src="./images/our-team/designer.svg" alt="sticker">
+                            </strong>
+                            <img src="./images/our-team/2.jpg" alt="photo" class="card__image card__image--size80">
+                            <div class="card__text card__text--our-team">
+                                <h3 class="card__title card__title--our-team">Алиса Сухорукова</h3>
+                                <h4 class="card__subtitle">Дизайнер</h4>
+                                <h3 class="card__title card__title--our-team-orange">Опыт работы 6 лет</h3>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-30 our-team__col-30">
+                        <div class="card our-team__card">
+                            <strong class="card__sticker-top">
+                                <img src="./images/our-team/portfolio.svg" alt="sticker">
+                            </strong>
+                            <img src="./images/our-team/3.jpg" alt="photo" class="card__image card__image--size80">
+                            <div class="card__text card__text--our-team">
+                                <h3 class="card__title card__title--our-team">Давид Волынев</h3>
+                                <h4 class="card__subtitle">Бригадир</h4>
+                                <h3 class="card__title card__title--our-team-orange">Опыт работы 7 лет</h3>
+                            </div> 
+                        </div>
                     </div>
                 </div>
-                <div class="col-30 our-team__col-30">
-                    <div class="card our-team__card">
-                        <strong class="card__sticker-top">
-                            <img src="./images/our-team/designer.svg" alt="sticker">
-                        </strong>
-                        <img src="./images/our-team/2.jpg" alt="photo" class="card__image card__image--size80">
-                        <div class="card__text card__text--our-team">
-                            <h3 class="card__title card__title--our-team">Алиса Сухорукова</h3>
-                            <h4 class="card__subtitle">Дизайнер</h4>
-                            <h3 class="card__title card__title--our-team-orange">Опыт работы 6 лет</h3>
-                        </div> 
-                    </div>
-                </div>
-                <div class="col-30 our-team__col-30">
-                    <div class="card our-team__card">
-                        <strong class="card__sticker-top">
-                            <img src="./images/our-team/portfolio.svg" alt="sticker">
-                        </strong>
-                        <img src="./images/our-team/3.jpg" alt="photo" class="card__image card__image--size80">
-                        <div class="card__text card__text--our-team">
-                            <h3 class="card__title card__title--our-team">Давид Волынев</h3>
-                            <h4 class="card__subtitle">Бригадир</h4>
-                            <h3 class="card__title card__title--our-team-orange">Опыт работы 7 лет</h3>
-                        </div> 
-                    </div>
-                </div>
+                <p class="our-team__text">
+                    Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
+                </p>
             </div>
-            <p class="our-team__text">
-                Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
-            </p>
-            </div>
-            <!-- /.container -->
+            <!-- /.our-team__contant -->
+            </div><!-- /.container -->
         </section>
         <!-- /.section our-team -->
+
         <section class="section clients">
             <div class="container">
-                <div class="section-title clients__section-title wow fadeInUp" data-wow-duration="1.7s">
-                    <h2 class="section-title__heading" id="clients">Наши клиенты</h2>
-                    <div class="section-title__image">
-                        <img src="images/clients.svg" alt="clients">
-                    </div>
-                    <p class="section-title__description section-title__description--width25rem wow fadeInUp" data-wow-duration="2s">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
-                </div><!-- /.section-title-->
-            <div class="row clients__row">
-                <div class="col-30 clients__col-30">
-                    <div class="card clients__card">
-                        <div class="clients__title">
-                            <img src="./images/clients/client-1.png" alt="client-1" class="card__image card__image--small">
-                            <h3 class="card__title card__title--no-padding">Савельева Екатерина&nbsp;Львовна</h3>
+                <div class="clients__contant">
+                    <div class="section-title clients__section-title">
+                        <h2 class="section-title__heading" id="clients">Наши клиенты</h2>
+                        <div class="section-title__image">
+                            <img src="images/clients.svg" alt="clients">
                         </div>
-                        <p class="clients__text">
-                            Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
-                        </p>
-                        <strong class="card__sticker card__sticker--clients">
-                            <div class="card__sticker--contant">
-                                <img src="./images/clients/square.svg" alt="square">
-                                <p class="card__sticker--text">40 M<sup>2</sup></p>
-                                <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
-                                <img src="./images/clients/calendar.svg" alt="calendar">
-                                <p class="card__sticker--text">48 дней</p>
+                        <p class="section-title__description section-title__description--width25rem">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+                    </div><!-- /.section-title-->
+                    <div class="row clients__row">
+                        <div class="col-30 clients__col-30">
+                            <div class="card clients__card">
+                                <div class="clients__title">
+                                    <img src="./images/clients/client-1.png" alt="client-1" class="card__image card__image--small">
+                                    <h3 class="card__title card__title--no-padding">Савельева Екатерина&nbsp;Львовна</h3>
+                                </div>
+                                <p class="clients__text">
+                                    Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                                </p>
+                                <strong class="card__sticker card__sticker--clients">
+                                    <div class="card__sticker--contant">
+                                        <img src="./images/clients/square.svg" alt="square">
+                                        <p class="card__sticker--text">40 M<sup>2</sup></p>
+                                        <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
+                                        <img src="./images/clients/calendar.svg" alt="calendar">
+                                        <p class="card__sticker--text">48 дней</p>
+                                    </div>
+                                </strong>
                             </div>
-                        </strong>
-                    </div>
-                </div>
-                <div class="col-30 clients__col-30">
-                    <div class="card clients__card">
-                        <div class="clients__title">
-                            <img src="./images/clients/client-2.png" alt="client-1" class="card__image card__image--small">
-                            <h3 class="card__title card__title--no-padding">Большов Михаил&nbsp;Анатольевич</h3>
                         </div>
-                        <p class="clients__text">
-                            Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
-                        </p>
-                        <strong class="card__sticker card__sticker--clients">
-                            <div class="card__sticker--contant">
-                                <img src="./images/clients/square.svg" alt="square">
-                                <p class="card__sticker--text">90 M<sup>2</sup></p>
-                                <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
-                                <img src="./images/clients/calendar.svg" alt="calendar">
-                                <p class="card__sticker--text">128 дней</p>
+                        <div class="col-30 clients__col-30">
+                            <div class="card clients__card">
+                                <div class="clients__title">
+                                    <img src="./images/clients/client-2.png" alt="client-1" class="card__image card__image--small">
+                                    <h3 class="card__title card__title--no-padding">Большов Михаил&nbsp;Анатольевич</h3>
+                                </div>
+                                <p class="clients__text">
+                                    Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                                </p>
+                                <strong class="card__sticker card__sticker--clients">
+                                    <div class="card__sticker--contant">
+                                        <img src="./images/clients/square.svg" alt="square">
+                                        <p class="card__sticker--text">90 M<sup>2</sup></p>
+                                        <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
+                                        <img src="./images/clients/calendar.svg" alt="calendar">
+                                        <p class="card__sticker--text">128 дней</p>
+                                    </div>
+                                </strong>
                             </div>
-                        </strong>
-                    </div>
-                </div>
-                <div class="col-30 clients__col-30">
-                    <div class="card clients__card">
-                        <div class="clients__title">
-                            <img src="./images/clients/client-3.png" alt="client-1" class="card__image card__image--small">
-                            <h3 class="card__title card__title--no-padding">Хасанов Даниил&nbsp;Муратович</h3>
                         </div>
-                        <p class="clients__text">
-                            Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
-                        </p>
-                        <strong class="card__sticker card__sticker--clients">
-                            <div class="card__sticker--contant">
-                                <img src="./images/clients/square.svg" alt="square">
-                                <p class="card__sticker--text">56 M<sup>2</sup></p>
-                                <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
-                                <img src="./images/clients/calendar.svg" alt="calendar">
-                                <p class="card__sticker--text">86 дней</p>
+                        <div class="col-30 clients__col-30">
+                            <div class="card clients__card">
+                                <div class="clients__title">
+                                    <img src="./images/clients/client-3.png" alt="client-1" class="card__image card__image--small">
+                                    <h3 class="card__title card__title--no-padding">Хасанов Даниил&nbsp;Муратович</h3>
+                                </div>
+                                <p class="clients__text">
+                                    Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                                </p>
+                                <strong class="card__sticker card__sticker--clients">
+                                    <div class="card__sticker--contant">
+                                        <img src="./images/clients/square.svg" alt="square">
+                                        <p class="card__sticker--text">56 M<sup>2</sup></p>
+                                        <img src="./images/clients/V.svg" alt="vertical" class="clients__separat">
+                                        <img src="./images/clients/calendar.svg" alt="calendar">
+                                        <p class="card__sticker--text">86 дней</p>
+                                    </div>
+                                </strong>
                             </div>
-                        </strong>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </div>
-            <!-- /.container -->
-        </section>
-        <!-- /.section clients -->
+                </div><!-- /.clients__contant -->
+            </div><!-- /.container -->
+        </section><!-- /.section clients -->
     </div><!-- /.main-->
     <section class="section section--empty"></section>
     <footer class="footer section--dark">
@@ -492,18 +506,18 @@
                 <form action="mail.php" class="form footer__form" method="POST">
                     <div class="footer__input-group">
                         <label for="user-name" class="label form__label label--light">Имя</label>
-                        <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
+                        <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:"></input>
                     </div>
                     <div class="footer__input-group">
                         <label for="user-phone" class="label form__label label--light">Телефон</label>
-                        <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                        <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:"></input>
                     </div>
                     <div class="footer__input-group footer__input-group--wide">
                         <label for="user-question" class="label form__label label--light">Вопрос</label>
-                        <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:"></input>
+                        <input type="text" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:"></input>
                     </div>
                     <div class="policy footer__policy">
-                        <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+                        <input type="checkbox" name="policy-checkbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
                         <label for="policy-checkbox" class="policy__label footer__policy-label">Я соглашаюсь с обработкой данных</label>
                     </div>
                     <button class="button button--primary footer__button">Отправить</button>
@@ -549,27 +563,27 @@
             <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
             <form action="mail.php" method="POST" class="form modal__form">
                 <div class="input-group modal__input-group">
-                    <label for="user-name" class="label form__label label--light">Имя</label>
-                    <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:"></input>
+                    <label for="modal-user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:"></input>
                 </div>
                 <div class="input-group modal__input-group">
-                    <label for="user-phone" class="label form__label label--light">Телефон</label>
-                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:"></input>
+                    <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:"></input>
                 </div>
                 <div class="input-group modal__input-group">
-                    <label for="user-email" class="label form__label label--light">Email</label>
-                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email"></input>
+                    <label for="modal-user-email" class="label form__label label--light">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email"></input>
                 </div>
                 <div class="policy modal__policy">
-                    <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-                    <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                    <input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+                    <label for="modal-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
                 </div>
                 <button class="button button--primary modal__button">Отправить заявку</button>
             </form>
         </div>
     </div>
-    <div class="scroll-up">
-        <a href="#" class="scroll-up__link"></a>
+    <div class="scroll-button scroll-button__up">
+        <a href="#" class="scroll-button__link"></a>
     </div><!-- /.scroll-up-->
     <script 
         src="https://code.jquery.com/jquery-3.4.1.min.js">

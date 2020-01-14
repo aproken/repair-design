@@ -1,33 +1,85 @@
 .button
-  padding: 0.79rem 1.63rem
+  color: $light
   border: none
+  border-radius: 0.14rem
   outline: none
   text-decoration: none
-  border-radius: 0.14rem
   text-transform: uppercase
-  font-family: Futura Demi
-  font-size: 1.073rem
-  font-weight: 500;
+  font-family: 'Futura Demi'
+  font-weight: 500
   &:hover
     cursor: pointer
   &--primary
     padding: 1.3rem 1.79rem
-    color: $light
+    font-size: 1.073rem
     background-color: $primary
     box-shadow: 0px 0.35rem 1.07rem rgba($primary, 0.2)
     transition: box-shadow 0.3s
     &:hover
       box-shadow: none
-      color: $light
       background-color: #E2A542
   &--outline
     padding: 1.3rem 3rem
     border: 0.07rem solid $light
     background-color: transparent
-    color: $light
     &:hover
       color: $primary
       border: 0.07rem solid $primary
+
+.scroll-button
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    cursor: pointer
+  &__down
+    position: absolute
+    z-index: 3
+    left: 0
+    bottom: 0
+    min-width: 17.64rem
+    min-height: 6.92rem
+    background-color: $dark
+    &::after
+      content: ''
+      background: url('../images/arrow-down.svg') no-repeat
+      background-position: center
+      width: 2.14rem
+      height: 2.14rem
+      border: 0.142rem solid $primary
+      border-radius: 50%
+      margin-left: 0.857rem 
+  &__link
+    font-family: 'Yeseva One', cursive
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 0.857rem
+    line-height: 138.6%;
+    text-transform: uppercase
+    text-decoration: none
+    color: $light
+  &__up
+    position: fixed
+    visibility: hidden
+    z-index: 3
+    right: -5rem
+    bottom: 7rem
+    min-width: 17.64rem
+    min-height: 6.92rem 
+    &::after
+      content: ''
+      background: url('../images/arrow-down.svg') no-repeat
+      transform: rotate(180deg)
+      background-size: 2rem
+      background-position: center
+      width: 5.14rem
+      height: 5.14rem
+      border: 0.142rem solid $primary
+      border-radius: 50%
+      margin-left: 0.857rem 
+.play
+  &:hover
+    cursor: pointer
 .label
   &--light
     color: rgba($light, 0.5)
@@ -37,6 +89,7 @@
     line-height: 0.8rem
   &--dark
     color: rgba($dark, 0.5)
+
 .input
   background-color: transparent
   border: none
@@ -58,12 +111,12 @@
   &--dark
     &::placeholder
       color: $dark
+
 .policy
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked +
-      .policy__label
+    &:checked + .policy__label
         &::before
           background: $primary url('../images/check.svg') no-repeat center / 0.8rem
   &__label

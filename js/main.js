@@ -72,15 +72,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $(window).on('scroll', function() {
         if($(this).scrollTop()) {
-            $('.scroll-up').css("visibility", "visible");
+            $('.scroll-button__up').css("visibility", "visible");
         } else {
-            $('.scroll-up').css("visibility", "hidden");
+            $('.scroll-button__up').css("visibility", "hidden");
         }
     });
 
-    $('.scroll-up').on('click', function() {
+    $('.scroll-button__up').on('click', function() {
         $("html, body").animate({
             scrollTop: 0
+        }, 1500);
+    });
+
+    $('.scroll-button__down').on('click', function() {
+        $("html, body").animate({
+            scrollTop: window.innerHeight
         }, 1500);
     });
 
@@ -121,8 +127,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 // правило-объект (блок)
                 userEmail: {
                 required: true,
-                email: true
-                }
+                email: true,
+                },
+                'policy-checkbox': { required: true }
             },
             //сообщения
             messages: {
@@ -137,7 +144,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             userEmail: {
                 required: "Пожалуйста, введите адрес электронной почты",
                 email: "Формат электронной почты: name@domain.com"
-            }
+            },
+            'policy-checkbox': 'Необходимо согласие на обработку данных'
             }
         })
     });
