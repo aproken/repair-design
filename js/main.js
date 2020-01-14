@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 'policy-checkbox': { required: true }
             },
             //сообщения
+            errorElement: "div",
             messages: {
             userName: {
                 required: "Пожалуйста, введите имя",
@@ -146,7 +147,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 email: "Формат электронной почты: name@domain.com"
             },
             'policy-checkbox': 'Необходимо согласие на обработку данных'
-            }
+            },
+            errorPlacement: function (error, element) {
+                if (element.attr("type") == "checkbox") {
+                    return element.next('label').append(error);
+                }
+            
+                 error.insertAfter($(element));
+            },
         })
     });
 
