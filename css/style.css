@@ -397,8 +397,8 @@ template {
       transform: rotate(180deg);
       background-size: 2rem;
       background-position: center;
-      width: 5.14rem;
-      height: 5.14rem;
+      width: 4.14rem;
+      height: 4.14rem;
       border: 0.142rem solid #E3B873;
       border-radius: 50%;
       margin-left: 0.857rem; }
@@ -724,30 +724,34 @@ img {
     color: #E3B873; }
 
 @media screen and (max-width: 786px) {
-  .hero__instagram {
-    display: none; } }
+  .hero {
+    height: 70rem; }
+    .hero__instagram {
+      display: none; } }
 
 @media screen and (max-width: 575px) {
-  .hero__contant {
-    margin-left: 0; }
-  .hero__title {
-    max-width: 24.21rem;
-    line-height: 138%;
-    font-size: 1.8rem;
-    letter-spacing: 0.02rem;
-    margin-bottom: 1.14rem; }
-  .hero__text {
-    max-width: 23.4rem;
-    font-family: Futura Book;
-    font-size: 1.28rem;
-    line-height: 132.83%;
-    letter-spacing: 0.02rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    width: 100%;
-    max-width: 30rem;
-    margin-bottom: 1.85rem; }
+  .hero {
+    height: 50rem; }
+    .hero__contant {
+      margin-left: 0; }
+    .hero__title {
+      max-width: 24.21rem;
+      line-height: 138%;
+      font-size: 1.8rem;
+      letter-spacing: 0.02rem;
+      margin-bottom: 1.14rem; }
+    .hero__text {
+      max-width: 23.4rem;
+      font-family: Futura Book;
+      font-size: 1.28rem;
+      line-height: 132.83%;
+      letter-spacing: 0.02rem;
+      margin-bottom: 2.28rem; }
+    .hero__button {
+      display: block;
+      width: 100%;
+      max-width: 30rem;
+      margin-bottom: 1.85rem; }
   .contacts__phone {
     margin-right: 0;
     color: white;
@@ -761,7 +765,7 @@ img {
 
 .projects__text {
   color: white;
-  max-width: 31.57rem;
+  max-width: 29rem;
   font-weight: 400;
   font-size: 1.286rem;
   line-height: 2.071rem;
@@ -780,7 +784,7 @@ img {
     flex-basis: 50%;
     margin-bottom: 1.42rem; }
   .swiper-slide__heading {
-    font-family: Yeseva One;
+    font-family: 'Yeseva One', cursive;
     font-weight: 100;
     font-size: 1.286rem;
     line-height: 1.786;
@@ -793,18 +797,23 @@ img {
     color: white;
     margin: 0; }
 
-.swiper-pagination-billets {
-  width: auto; }
+.swiper-pagination {
+  top: -1rem; }
+  .swiper-pagination-billets {
+    width: auto; }
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3);
+    margin-right: 1.253rem; }
+    .swiper-pagination-bullet-active {
+      background: white; }
 
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3);
-  margin-right: 1.253rem; }
-  .swiper-pagination-bullet-active {
-    background: white; }
+.swiper__group {
+  position: relative;
+  height: 1rem;
+  margin-left: auto;
+  margin-right: auto; }
 
 .swiper-button-prev, .swiper-button-next {
-  bottom: 0;
-  top: auto;
   background-size: 42px;
   width: 42px;
   height: 14px; }
@@ -827,13 +836,29 @@ img {
     margin-bottom: 0; } }
 
 @media screen and (max-width: 850px) {
-  .section-title--projects {
-    -webkit-box-align: center;
-    align-items: center; }
+  .section-title--strong {
+    font-size: 1.84rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+    .section-title--strong::after {
+      display: none; }
   .row .col__hidden {
-    display: none; } }
+    display: none; }
+  .projects__text {
+    font-size: 1.18rem;
+    max-width: 43.57rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem; }
+  .swiper-slide__text {
+    margin-top: 1.3rem;
+    padding-left: 3rem; } }
 
 @media screen and (max-width: 575px) {
+  .projects__contant {
+    padding-top: 2.14rem; }
   .row .col__hidden {
     display: none; } }
 

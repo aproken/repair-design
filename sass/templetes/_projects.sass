@@ -4,7 +4,7 @@
     padding-bottom: 25rem
   &__text
     color: $light
-    max-width: 31.57rem
+    max-width: 29rem
     font-weight: 400
     font-size: 1.286rem
     line-height: 2.071rem
@@ -21,7 +21,7 @@
       flex-basis: 50%
       margin-bottom: 1.42rem
     &__heading
-      font-family: Yeseva One
+      font-family: 'Yeseva One', cursive
       font-weight: 100
       font-size: 1.286rem
       line-height: 1.786
@@ -34,6 +34,7 @@
       color: $light
       margin: 0
   &-pagination
+    top: -1rem
     &-billets
       width: auto
     &-bullet
@@ -41,10 +42,13 @@
       margin-right: 1.253rem
       &-active
         background: $light
+  &__group
+    position: relative
+    height: 1rem
+    margin-left: auto
+    margin-right: auto
   &-button
     &-prev, &-next
-      bottom: 0
-      top: auto
       background-size: 42px
       width: 42px
       height: 14px
@@ -58,6 +62,9 @@
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
   width: auto
   bottom: -0.143rem
+
+
+
 @media screen and (max-width: 992px)
   .swiper
       &-slide  
@@ -65,12 +72,32 @@
           margin-bottom: 0
 @media screen and (max-width: 850px)
   .section-title
-      &--projects
-        align-items: center
+      &--strong
+        font-size: 1.84rem
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+        &::after
+          display: none
   .row
     .col__hidden
           display: none
+  .projects__text
+    font-size: 1.18rem
+    max-width: 43.57rem
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    padding-bottom: 2rem
+  .swiper
+    &-slide
+      &__text
+        margin-top: 1.3rem
+        padding-left: 3rem
 @media screen and (max-width: 575px)
+  .projects
+    &__contant
+      padding-top: 2.14rem
   .row
     .col__hidden
       display: none
