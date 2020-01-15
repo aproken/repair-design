@@ -123,7 +123,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     required: true,
                     minlength: 2,
                 },
-                userPhone: "required",
+                userPhone: {
+                    required: true,
+                    minlength: 17,
+                    maxlength: 17,
+                },
                 // правило-объект (блок)
                 userEmail: {
                 required: true,
@@ -140,7 +144,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             },
             userPhone: {
                 required: "Пожалуйста, введите телефон",
-                phone: "",
+                minlength: "Формат номера: +7(000) 000-00-0",
+                maxlength: "Формат номера: +7(000) 000-00-0",
             },
             userEmail: {
                 required: "Пожалуйста, введите адрес электронной почты",

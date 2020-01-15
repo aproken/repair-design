@@ -329,6 +329,16 @@ template {
   font-weight: 500; }
   .button:hover {
     cursor: pointer; }
+  .button--light-primary {
+    padding: 0.7rem 1.6rem;
+    font-size: 1.073rem;
+    background-color: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s; }
+    .button--light-primary:hover {
+      box-shadow: none;
+      background-color: #E2A542; }
   .button--primary {
     padding: 1.3rem 1.79rem;
     font-size: 1.073rem;
@@ -417,14 +427,14 @@ template {
   color: rgba(19, 19, 19, 0.5); }
 
 .input {
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: white;
   padding: 0.5rem 0; }
   .input:focus {
-    outline-offset: 3px;
+    outline-offset: 0;
     outline: 1px rgba(227, 184, 115, 0.6) solid;
     box-shadow: 0px 0.35rem 1.07rem rgba(227, 184, 115, 0.2); }
   .input--light {
@@ -684,6 +694,8 @@ img {
     max-width: 5.71rem;
     height: 100vh; }
   .hero__button {
+    padding: 1.1rem 1.79rem;
+    font-size: 1.073rem;
     margin-right: 1.42rem; }
 
 .instagram {
@@ -769,11 +781,10 @@ img {
   font-weight: 400;
   font-size: 1.286rem;
   line-height: 2.071rem;
-  margin-top: 2.43rem; }
+  margin-top: 2rem; }
 
 .swiper-container {
-  padding-bottom: 3.214rem;
-  margin-bottom: 3.214rem; }
+  padding-bottom: 3.214rem; }
 
 .swiper-slide {
   display: -webkit-box;
@@ -787,10 +798,11 @@ img {
     font-family: 'Yeseva One', cursive;
     font-weight: 100;
     font-size: 1.286rem;
-    line-height: 1.786;
+    line-height: 1rem;
     text-transform: uppercase;
     color: #E3B873;
-    padding: 0; }
+    padding: 0;
+    margin: 0.7rem 0; }
   .swiper-slide__value {
     font-size: 1.071rem;
     line-height: 1.429rem;
@@ -803,15 +815,14 @@ img {
     width: auto; }
   .swiper-pagination-bullet {
     background: rgba(255, 255, 255, 0.3);
-    margin-right: 1.253rem; }
+    margin: 0.2rem 0.6rem; }
     .swiper-pagination-bullet-active {
       background: white; }
 
 .swiper__group {
   position: relative;
   height: 1rem;
-  margin-left: auto;
-  margin-right: auto; }
+  text-align: left; }
 
 .swiper-button-prev, .swiper-button-next {
   background-size: 42px;
@@ -827,6 +838,10 @@ img {
 .swiper-button-next {
   background: url("../images/arrow-next.svg") no-repeat center; }
 
+.swiper-pagination-bullets, .swiper-button-prev, .swiper-button-next {
+  position: static;
+  display: inline-block; }
+
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -0.143rem; }
@@ -836,6 +851,8 @@ img {
     margin-bottom: 0; } }
 
 @media screen and (max-width: 850px) {
+  .projects__contant {
+    padding-top: 3.14rem; }
   .section-title--strong {
     font-size: 1.84rem;
     text-align: center;
@@ -852,6 +869,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2rem; }
+  .swiper__group {
+    text-align: center; }
   .swiper-slide__text {
     margin-top: 1.3rem;
     padding-left: 3rem; } }
@@ -868,7 +887,7 @@ img {
 
 .control__contant {
   margin-bottom: 0.214rem;
-  margin-top: -24rem; }
+  margin-top: -23rem; }
 
 .control__video {
   position: relative;
@@ -964,7 +983,7 @@ img {
       flex-direction: column; }
     .control__button {
       position: relative;
-      bottom: -5rem;
+      bottom: -4.3rem;
       -webkit-box-ordinal-group: 2;
       order: 1; }
     .control__policy-label {
@@ -1386,11 +1405,13 @@ img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-    margin-bottom: 2.429rem; }
+    margin-bottom: 2.429rem;
+    position: relative; }
     .modal__input-group:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
-    margin-bottom: 2.8rem; }
+    margin-bottom: 2.8rem;
+    position: relative; }
   .modal__button {
     align-self: flex-end; }
 
@@ -1404,7 +1425,7 @@ input.invalid {
 
 div.invalid {
   position: absolute;
-  padding-top: 0.7rem;
+  margin-top: 3.5rem;
   color: tomato; }
 
 #policy-checkbox-error {

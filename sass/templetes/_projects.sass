@@ -8,11 +8,10 @@
     font-weight: 400
     font-size: 1.286rem
     line-height: 2.071rem
-    margin-top: 2.43rem
+    margin-top: 2rem
 .swiper
   &-container
     padding-bottom: 3.214rem
-    margin-bottom: 3.214rem
   &-slide
     display: flex
     flex-wrap: wrap
@@ -24,10 +23,11 @@
       font-family: 'Yeseva One', cursive
       font-weight: 100
       font-size: 1.286rem
-      line-height: 1.786
+      line-height: 1rem
       text-transform: uppercase
       color: $primary
       padding: 0
+      margin: 0.7rem 0;
     &__value
       font-size: 1.071rem
       line-height: 1.429rem
@@ -39,14 +39,14 @@
       width: auto
     &-bullet
       background: rgba($light, 0.3)
-      margin-right: 1.253rem
+      margin: 0.2rem 0.6rem;
       &-active
         background: $light
   &__group
     position: relative
     height: 1rem
-    margin-left: auto
-    margin-right: auto
+    text-align: left
+
   &-button
     &-prev, &-next
       background-size: 42px
@@ -59,6 +59,12 @@
       background: url('../images/arrow-prev.svg') no-repeat center
     &-next
       background: url('../images/arrow-next.svg') no-repeat center
+  
+  &-pagination-bullets,
+  &-button-prev,
+  &-button-next
+    position: static
+    display: inline-block
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
   width: auto
   bottom: -0.143rem
@@ -71,6 +77,9 @@
         &__text
           margin-bottom: 0
 @media screen and (max-width: 850px)
+  .projects
+    &__contant
+      padding-top: 3.14rem
   .section-title
       &--strong
         font-size: 1.84rem
@@ -90,6 +99,8 @@
     margin-right: auto
     padding-bottom: 2rem
   .swiper
+    &__group
+      text-align: center
     &-slide
       &__text
         margin-top: 1.3rem
