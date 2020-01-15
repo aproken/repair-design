@@ -1,0 +1,92 @@
+.section
+  &-title
+    display: flex
+    flex-direction: column
+    align-items: center
+    &--strong
+      align-items: flex-start
+      color: $primary
+      max-width: 19.8rem 
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      font-size: 1.926rem
+      line-height: 2.623rem
+      letter-spacing: -0.07em;
+      margin: 0
+      padding: 0
+      &::after
+        display: inline-block
+        content: ''
+        width: 6.571rem
+        height: 0.14rem
+        background-color: $primary
+        margin: -1.286rem 2.714rem 0.714rem 10.757rem;
+    &__heading
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      font-size: 1.43rem
+      font-weight: 100
+      &--main-dark, &--secondary-dark
+        color: $dark
+      &--main-light
+        color: $light 
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 2.3rem
+      &::before, &::after
+        content: ''
+        width: 2.28rem
+        height: 0.14rem
+        background-color: $primary
+        margin: 0 0.71rem
+    &__description
+      max-width: 52.0rem
+      font-family: Futura Book;
+      font-weight: normal;
+      font-size: 1.42rem
+      line-height: 1.92rem
+      text-align: center
+      margin: auto
+      padding-bottom: 3rem
+      &--width32rem
+        max-width: 32rem 
+      &--width25rem
+        max-width: 25.714rem 
+
+@media screen and (max-width: 992px)
+  .section
+    &-title
+      &__heading
+        &--secondary-dark
+          color: $light
+      &__description
+        color: $light
+        &--width25rem
+          color: $dark
+      &__text
+        max-width: 80%       
+@media screen and (max-width: 850px)
+  .section
+    &-title
+      &--strong
+        font-size: 1.84rem
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+        &::after
+          display: none
+@media screen and (max-width: 575px)
+  .section
+    &-title
+      &--projects
+        align-items: center
+      &__heading
+        &--primary
+          text-align: center
+          &::after
+            display: none
+      &__text
+        text-align: center
+        padding: 1rem 0

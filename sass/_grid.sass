@@ -13,3 +13,32 @@
     flex-basis: 32%
   &-50
     width: 50%
+
+@media screen and (max-width: 992px)
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+  .col-30
+    flex-basis: 48%
+    margin-right: 0.5rem 
+@media screen and (max-width: 850px)
+  .col-50 
+    width: 100%
+@media screen and (max-width: 715px)
+  .col-30
+    &--view715px
+      flex-basis: 100%
+      width: 100%
+      margin: 0
+@media screen and (max-width: 575px)
+  .row
+    display: flex
+    flex-direction: column
+    align-items: center 
+  .col-30
+    width: 100%
+    margin: 0
+  .col-50 
+    width: 100%

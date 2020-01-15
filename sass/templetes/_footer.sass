@@ -52,7 +52,7 @@
     left: 0
     right: 0
     background-color: $dark
-    padding: 3.46rem 0
+    padding: 1rem 0
   &__text
     font-family: 'Yeseva One', cursive
     font-style: normal
@@ -62,6 +62,9 @@
     text-align: center
     text-transform: uppercase
     color: $primary
+  &__phone
+    text-decoration: none
+    color: $primary
   &__social
     text-align: center
     margin-top: 2.2rem
@@ -69,3 +72,57 @@
     margin-right: 1rem
   &__map
     margin-top: 2rem
+    height: 52rem
+@media screen and (max-width: 992px)
+  .section
+    &--empty
+      height: 13rem
+@media screen and (max-width: 575px)
+  .footer
+    background-color: $dark
+    background-image: none
+    &-wrap
+      background-color: $dark
+      background-image: none
+      padding: 0
+    &__input-group
+      flex-basis: 8.5rem
+      &--wide
+        margin-top: 0
+    &__policy
+      position: relative
+      margin-top: -5rem
+    &__policy-label
+      justify-content: flex-start
+    &__navbar
+      display: none
+    &__form
+      flex-direction: column
+      &__button
+        position: relative
+        bottom: -4.3rem
+        order: 1
+      &__policy-label 
+        justify-content: flex-start
+        margin-top: -3.8rem
+        font-size: 1.34rem
+    &__button
+      width: 100%
+    &__contacs
+      display: flex
+      flex-direction: column
+      padding-bottom: 3rem
+    &__map
+      margin-top: 0rem
+      height: 43rem
+  .label
+    &--dark
+      color: rgba($light, 0.5)
+  .section
+    &--empty
+      background-color: $dark
+      background-image: none
+.contacs-group
+  order: 5
+  #policy-checkbox-error 
+    bottom: -1.7rem

@@ -46,6 +46,7 @@
     flex-basis: 30%
   &__input
     color: $dark
+    font-size: 1.5rem
   &__policy
     flex-basis: 100%
     margin-top: 1.2rem
@@ -56,9 +57,6 @@
 .control
   &__label
     font-size: 1.25rem
-.control
-  &__input
-    font-size: 1.5rem
 .video
   &__play
     position: relative
@@ -67,7 +65,6 @@
   .control
     background-color: $dark
     color: $light
-    .control
     &__video
       margin-bottom: 2rem
     &__text
@@ -77,6 +74,10 @@
       margin-bottom: 1.71rem
       &::before
         margin-bottom: 1.53rem
+    &__input
+      font-size: 1.5rem
+      padding-bottom: 1rem
+      margin-bottom: 4.5rem
     &__form
       flex-direction: column
     &__button
@@ -90,13 +91,6 @@
   .label
     &--dark
       color: rgba($light, 0.5)
-  .control
-    &__input
-      font-size: 1.5rem
-      padding-bottom: 1rem
-      margin-bottom: 4.5rem
-      //&:last-child
-      //  margin-bottom: 1.82rem
   .input    
     &--dark
       color: $light

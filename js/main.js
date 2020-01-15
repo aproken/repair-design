@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             },
             userPhone: {
                 required: "Пожалуйста, введите телефон",
-                minlength: "Формат номера: +7(000) 000-00-0",
-                maxlength: "Формат номера: +7(000) 000-00-0",
+                minlength: "Формат номера: +7(000) 000-00-00",
+                maxlength: "Формат номера: +7(000) 000-00-00",
             },
             userEmail: {
                 required: "Пожалуйста, введите адрес электронной почты",
