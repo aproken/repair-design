@@ -160,6 +160,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
             
                  error.insertAfter($(element));
             },
+            submiteHandler: function(form) {
+                event.preventDefault();
+                const clearAnswer = function(){
+                    $('.modal__answer').hide()
+                    modal.removeClass('modal--visible')
+                }
+                const showAnswer = function(){
+                    modal.find('form').hide()
+                    $('.modal__answer').show()
+                }
+                $.ajax({
+                    method: "POST",
+                    url: "mail.php",
+                    data: $(form).serialize(),
+                    success: function(response) {
+                        console.log(response)
+                        $(form)[0].reset()
+                        showAnswer()
+                        setTimeout(clearAnswer, 5000)
+                    },
+                    error: function(response) {
+                        console.error(response)
+                        $(form)[0].reset()
+                        showAnswer()
+                        setTimeout(clearAnswer, 5000)
+                    }
+                })
+            }
         })
     });
 

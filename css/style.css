@@ -1414,6 +1414,10 @@ img {
     position: relative; }
   .modal__button {
     align-self: flex-end; }
+  .modal__answer {
+    display: none;
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
 
 label.invalid {
   padding-top: 0.7rem;
