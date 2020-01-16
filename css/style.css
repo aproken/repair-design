@@ -1562,8 +1562,9 @@ img {
 .contacs-group {
   -webkit-box-ordinal-group: 6;
   order: 5; }
-  .contacs-group #policy-checkbox-error {
-    bottom: -1.7rem; }
+
+#policy-checkbox-error {
+  bottom: -1.7rem; }
 
 .modal {
   opacity: 0;
