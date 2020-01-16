@@ -172,4 +172,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     //маска телефона
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
+//Видео
+    var player;
+    $('.video__play').on('click',function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '465',
+          width: '100%',
+          videoId: 'cm-p6dcXpHs',
+          events: {
+            'onReady': videoPlay,
+          }
+        });
+      })
+
+      function videoPlay(event) {
+        event.target.playVideo();
+      }
+
+
   });
+
+

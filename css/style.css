@@ -498,13 +498,23 @@ template {
     margin-right: 0.64rem; }
 
 @media screen and (max-width: 992px) {
-  .button--light-primary:hover {
-    background-color: #E3B873; }
-  .button--primary:hover {
-    background-color: #E3B873; }
+  .button--light-primary {
+    box-shadow: none; }
+    .button--light-primary:hover {
+      background-color: #E3B873;
+      box-shadow: none;
+      cursor: default; }
+  .button--primary {
+    box-shadow: none; }
+    .button--primary:hover {
+      background-color: #E3B873;
+      box-shadow: none;
+      cursor: default; }
   .button--outline:hover {
     color: white;
-    border: 0.07rem solid white; } }
+    border: 0.07rem solid white;
+    box-shadow: none;
+    cursor: default; } }
 
 @media screen and (max-width: 575px) {
   .button {
@@ -1681,8 +1691,7 @@ div.invalid {
 
 @media screen and (max-width: 992px) {
   .nav {
-    display: none; } }
-
-*:hover {
-  box-shadow: none;
-  cursor: default; }
+    display: none; }
+  *:hover {
+    box-shadow: none;
+    cursor: default; } }
