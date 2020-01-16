@@ -1057,6 +1057,10 @@ img {
     .input--dark::placeholder {
       color: white; } }
 
+@media screen and (max-width: 575px) {
+  .control__image {
+    width: 5.571rem; } }
+
 .types__contant {
   padding-top: 10rem; }
 
@@ -1661,3 +1665,8 @@ div.invalid {
 @media screen and (max-width: 992px) {
   .nav {
     display: none; } }
+
+@media screen and (max-width: 575px) {
+  *:hover {
+    box-shadow: none;
+    cursor: default; } }
