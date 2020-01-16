@@ -846,7 +846,7 @@ img {
     font-family: 'Yeseva One', cursive;
     font-weight: 100;
     font-size: 1.286rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
     text-transform: uppercase;
     color: #E3B873;
     padding: 0;
@@ -994,6 +994,7 @@ img {
   font-size: 1.5rem; }
 
 .control__policy {
+  position: relative;
   flex-basis: 100%;
   margin-top: 1.2rem; }
   .control__policy-label {
@@ -1010,6 +1011,12 @@ img {
   position: relative;
   margin: auto; }
 
+#control-user-name-error {
+  margin-top: 4.5rem; }
+
+#control-user-phone-error {
+  margin-top: 4.5rem; }
+
 @media screen and (max-width: 648px) {
   .control {
     background-color: #131313;
@@ -1025,7 +1032,7 @@ img {
         margin-bottom: 1.53rem; }
     .control__input {
       font-size: 1.5rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0.5rem;
       margin-bottom: 4.5rem; }
     .control__form {
       -webkit-box-orient: vertical;
@@ -1466,6 +1473,7 @@ img {
   .footer__input {
     color: white; }
   .footer__policy {
+    position: relative;
     flex-basis: 100%;
     margin-top: 1.9rem;
     color: white; }
@@ -1520,7 +1528,6 @@ img {
       .footer__input-group--wide {
         margin-top: 0; }
     .footer__policy {
-      position: relative;
       margin-top: -5rem; }
     .footer__policy-label {
       -webkit-box-pack: start;
@@ -1553,6 +1560,8 @@ img {
     .footer__map {
       margin-top: 0rem;
       height: 43rem; }
+    .footer__text {
+      line-height: 1.8rem; }
   .label--dark {
     color: rgba(255, 255, 255, 0.5); }
   .section--empty {
@@ -1562,9 +1571,6 @@ img {
 .contacs-group {
   -webkit-box-ordinal-group: 6;
   order: 5; }
-
-#policy-checkbox-error {
-  bottom: -1.7rem; }
 
 .modal {
   opacity: 0;
@@ -1655,7 +1661,8 @@ div.invalid {
   color: tomato; }
 
 #policy-checkbox-error {
-  bottom: -1.3rem; }
+  bottom: -1.3rem;
+  font-size: 1rem; }
 
 @media screen and (max-width: 1260px) {
   html {

@@ -123,6 +123,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     required: true,
                     minlength: 2,
                 },
+                userQuestion: {
+                    required: true,
+                    minlength: 2
+                },
                 userPhone: {
                     required: true,
                     minlength: 17,
@@ -151,6 +155,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 required: "Пожалуйста, введите адрес электронной почты",
                 email: "Формат электронной почты: name@domain.com"
             },
+            userQuestion: {
+                required: "Пожалуйста, введите свой вопрос"
+            },
             'policy-checkbox': 'Необходимо согласие на обработку данных'
             },
             errorPlacement: function (error, element) {
@@ -164,5 +171,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     //маска телефона
-    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
   });
