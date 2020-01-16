@@ -497,6 +497,15 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+@media screen and (max-width: 992px) {
+  .button--light-primary:hover {
+    background-color: #E3B873; }
+  .button--primary:hover {
+    background-color: #E3B873; }
+  .button--outline:hover {
+    color: white;
+    border: 0.07rem solid white; } }
+
 @media screen and (max-width: 575px) {
   .button {
     font-size: 1.25rem; }
@@ -1674,7 +1683,6 @@ div.invalid {
   .nav {
     display: none; } }
 
-@media screen and (max-width: 575px) {
-  *:hover {
-    box-shadow: none;
-    cursor: default; } }
+*:hover {
+  box-shadow: none;
+  cursor: default; }
