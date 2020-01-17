@@ -1591,7 +1591,8 @@ img {
   -webkit-box-ordinal-group: 6;
   order: 5; }
 
-.modal {
+.modal,
+.modal-answer {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1609,16 +1610,19 @@ img {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center; }
-  .modal--visible {
+  .modal--visible,
+  .modal-answer--visible {
     opacity: 1;
     visibility: visible; }
-  .modal__dialog {
+  .modal__dialog,
+  .modal-answer__dialog {
     position: relative;
     max-width: 36.36rem;
     background: #131313 url("../images/bg-lines.svg") no-repeat;
     padding: 2.357rem 3.5rem 1.928rem;
     color: white; }
-  .modal__close {
+  .modal__close,
+  .modal-answer__close {
     position: absolute;
     outline: none;
     top: 0;
@@ -1629,13 +1633,15 @@ img {
     background-size: cover;
     border: none;
     margin: 12px; }
-    .modal__close:hover {
+    .modal__close:hover,
+    .modal-answer__close:hover {
       width: 30px;
       height: 30px;
       top: -1px;
       right: -1px;
       cursor: pointer; }
-  .modal__title {
+  .modal__title,
+  .modal-answer__title {
     max-width: 25.857rem;
     font-family: 'Yeseva One', cursive;
     font-weight: 100;
@@ -1644,13 +1650,15 @@ img {
     text-align: center;
     margin: 0;
     margin-bottom: 2.429rem; }
-  .modal__form {
+  .modal__form,
+  .modal-answer__form {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column; }
-  .modal__input-group {
+  .modal__input-group,
+  .modal-answer__input-group {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -1658,12 +1666,15 @@ img {
     flex-direction: column;
     margin-bottom: 2.429rem;
     position: relative; }
-    .modal__input-group:last-of-type {
+    .modal__input-group:last-of-type,
+    .modal-answer__input-group:last-of-type {
       margin-bottom: 1rem; }
-  .modal__policy {
+  .modal__policy,
+  .modal-answer__policy {
     margin-bottom: 2.8rem;
     position: relative; }
-  .modal__button {
+  .modal__button,
+  .modal-answer__button {
     align-self: flex-end; }
 
 label.invalid {

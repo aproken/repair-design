@@ -28,7 +28,9 @@
                 </nav>
                 <div class="contacts navbar__contacts">
                     <a href="tel:+79997683299" class="phone contacts__phone">+7(999)768-32-99</a>
-                    <button onclick="ym(65446366, 'reachGoal', 'button'); return true;" class="button contacts__button button--light-primary" data-toggle="modal">Заказать звонок</button>    
+                    <button onclick="ym(65446366, 'reachGoal', 'button'); return true;" class="button contacts__button button--light-primary"
+                            data-toggle="modal"
+                            data-instance=".modal-callback">Заказать звонок</button>
                 </div>
             </div>    
         </div>
@@ -43,8 +45,13 @@
                 <div class="hero__contant">       
                     <h1 class="title hero__title wow fadeInRight">Турецкий ремонт в&nbsp;<span class="title--primary fadeInRight">Ростове-на-Дону</span></h1>
                     <p class="hero__text wow fadeInRight" data-wow-delay="0.1s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-                    <button class="button hero__button button--primary wow fadeIn" data-wow-delay="1.1s" data-toggle="modal">Рассчитать стоимость</button>
-                    <button class="button hero__button button--outline wow fadeIn" data-wow-delay="1.9s" data-toggle="modal">Отправить заявку</button>
+                    <button class="button hero__button button--primary wow fadeIn"
+                            data-wow-delay="1.1s" data-toggle="modal"
+                            data-instance=".modal-callback">Рассчитать стоимость</button>
+                    <button class="button hero__button button--outline wow fadeIn"
+                            data-wow-delay="1.9s"
+                            data-toggle="modal"
+                            data-instance=".modal-callback">Отправить заявку</button>
                 </div><!-- /.hero__contant-->
             </div><!-- /.container-->
             
@@ -191,7 +198,7 @@
                     <p class="control__text">
                         На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы&nbsp;получить ссылку на трансляцию.
                     </p>
-                    <form action="mail.php" method="POST" class="form control__form" autocomplete="off">
+                    <form class="form control__form" autocomplete="off">
                         <div class="input-group control__input-group">
                             <label for="control-user-name" class="label form__label control__label label--dark">Имя</label>
                             <input type="text" name="userName" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:"></input>
@@ -505,7 +512,7 @@
             <div class="footer__contant">
                 <div class="footer-wrap">
                     <h3 class="footer__title">Остались вопросы?</h3>
-                    <form action="mail.php" class="form footer__form" method="POST" autocomplete="off">
+                    <form  class="form footer__form" autocomplete="off">
                         <div class="input-group footer__input-group">
                             <label for="footer-user-name" class="label form__label label--light">Имя</label>
                             <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:"></input>
@@ -564,11 +571,11 @@
             </div><!-- /.container -->    
         </div><!-- /.footer__navbar -->
     </footer>
-    <div class="modal">
+    <div class="modal-callback modal">
         <div class="modal__dialog">
             <button class="modal__close"></button>
             <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-            <form action="mail.php" method="POST" class="form modal__form" autocomplete="off">
+            <form class="form modal__form" autocomplete="off">
                 <div class="input-group modal__input-group">
                     <label for="modal-user-name" class="label form__label label--light">Имя</label>
                     <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:"></input>
@@ -589,6 +596,15 @@
             </form>
         </div>
     </div>
+
+  <div class="modal-answer modal">
+    <div class="modal__dialog">
+        <button class="modal__close"></button>
+        <h3 class="modal__title">Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.</h3>     
+    </div>
+  </div>
+
+  <!-- /.modal -->
     <div class="scroll-button scroll-button__up">
         <a href="#" class="scroll-button__link"></a>
     </div><!-- /.scroll-up-->

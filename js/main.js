@@ -44,29 +44,55 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(document).ready(function() {
     var modal = $('.modal'),
+        modalAnswer = $('.modal-answer'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close');
-       
+        closeBtn = $('.modal__close'),
+        closeBtnAnswer = $('.modal-answer__close');
+
+
+    function showModal(selector){
+        $(selector).toggleClass('modal--visible')
+    }
+
+    function hideModal(selector){
+        $(selector).removeClass('modal--visible')
+    }
+
+    function showAnswer(ans) {
+        modalAnswer.find('.modal-answer__title').text(ans)
+        modalAnswer.toggleClass('modal--visible')
+    }
+
+    function hideAnswer() {
+        modalAnswer.hide()
+    }
 
     modalBtn.on('click', function() {
-        modal.toggleClass('modal--visible');
-        });
+        const modalInst = $(this).data('instance') 
+        showModal(modalInst)
+    });
     
     closeBtn.on('click', function() {
-        modal.toggleClass('modal--visible');
+        $(this).parents('.modal').removeClass('modal--visible');
     });
 
     $(document).on('keydown', function(event){
         if (event.key === "Escape" || event.key === "Esc") {
             if (modal.hasClass('modal--visible')){
-                modal.toggleClass('modal--visible');
+                modal.find('form').each(function(i,x) {
+                    x.reset()
+                })
+                modal.removeClass('modal--visible');
             }
         }
     }) 
     
     modal.on('click', function(event) {
-        if (event.target.className === "modal modal--visible") {
-            modal.toggleClass('modal--visible'); 
+        if (event.target.classList.contains('modal')) {
+            modal.find('form').each(function(i,x) {
+                x.reset()
+            })
+            modal.removeClass('modal--visible');
         }
     });
 
@@ -167,6 +193,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
             
                  error.insertAfter($(element));
             },
+            submitHandler: function(form) {
+                $.ajax({
+                    method: "POST",
+                    url: "mail.php",
+                    data: $(form).serialize(),
+                    success: function(response) {
+                        console.log(response)
+                        $(form)[0].reset()
+                        showAnswer('Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.');
+                        hideModal('.modal-callback');
+                    },
+                    error: function(response) {
+                        console.error(response)
+                        $(form)[0].reset()
+                        showAnswer('Ошибка!')
+                        hideModal('.modal-callback');
+                    }
+                })
+                return false;
+            }
         })
     });
 
