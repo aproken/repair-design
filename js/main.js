@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                  error.insertAfter($(element));
             },
             submitHandler: function(form) {
+                ym(65452483, 'reachGoal', 'request');
                 $.ajax({
                     method: "POST",
                     url: "mail.php",
