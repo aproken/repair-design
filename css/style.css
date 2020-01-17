@@ -1650,6 +1650,11 @@ img {
     text-align: center;
     margin: 0;
     margin-bottom: 2.429rem; }
+  .modal__text,
+  .modal-answer__text {
+    font-family: 'Futura Book', sans-serif;
+    text-align: center;
+    font-size: 1.2rem; }
   .modal__form,
   .modal-answer__form {
     display: -webkit-box;
