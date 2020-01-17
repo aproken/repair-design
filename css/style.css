@@ -948,6 +948,10 @@ img {
   .row .col__hidden {
     display: none; } }
 
+@media screen and (max-width: 575px) {
+  .swiper-slide__text {
+    padding-left: 1rem; } }
+
 @media screen and (min-width: 851px) {
   .swiper-slide__image {
     display: none; } }
@@ -1041,7 +1045,10 @@ img {
     background-color: #131313;
     color: white; }
     .control__video {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      min-height: 26rem; }
+    .control__image {
+      width: 5.571rem; }
     .control__text {
       max-width: 29rem;
       line-height: 169.8%;
@@ -1059,7 +1066,7 @@ img {
       flex-direction: column; }
     .control__button {
       position: relative;
-      bottom: -4.3rem;
+      bottom: -2rem;
       -webkit-box-ordinal-group: 2;
       order: 1; }
     .control__policy-label {
@@ -1085,7 +1092,9 @@ img {
 
 @media screen and (max-width: 575px) {
   .control__image {
-    width: 5.571rem; } }
+    width: 5.571rem; }
+  .control__video {
+    min-height: 20rem; } }
 
 .types__contant {
   padding-top: 10rem; }
