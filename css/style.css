@@ -907,7 +907,8 @@ img {
 
 .swiper-pagination-bullets, .swiper-button-prev, .swiper-button-next {
   position: static;
-  display: inline-block; }
+  display: inline-block;
+  outline: none; }
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
@@ -1593,9 +1594,14 @@ img {
       margin-top: 0rem;
       height: 43rem; }
     .footer__text {
-      line-height: 1.8rem; }
+      line-height: 1.8rem;
+      display: inline; }
     .footer__phone {
       display: block; }
+  .contacs-group {
+    text-align: center;
+    padding-top: 2rem;
+    line-height: 2rem; }
   .label--dark {
     color: rgba(255, 255, 255, 0.5); }
   .section--empty {
