@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+	<link rel="dns-prefetch" href="//api-maps.yandex.ru">
     <title>Repair Design Project</title>
 </head>
 <body>
@@ -546,8 +548,17 @@
                             <a href="https://www.instagram.com/" class="footer__link"><img src="images/social-instagram.svg" alt="social-instagram"></a>
                         </div>
                     </div><!-- /.contacs-group -->
-                    <div class="map footer__map">
-                        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3af95539c1ad90f43e4c75e340f748a473f8b3e4fa37d8821ba53b2874eefacf&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <div class="map footer__map map_preload">
+                        <script>
+                            setTimeout(function(){
+                                var elem = document.createElement('script');
+                                elem.type = 'text/javascript';
+                                elem.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3af95539c1ad90f43e4c75e340f748a473f8b3e4fa37d8821ba53b2874eefacf&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false';
+                                document.querySelector('.footer__map').appendChild(elem);
+                            }, 2000);
+
+                            </script>
+                        <!-- <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3af95539c1ad90f43e4c75e340f748a473f8b3e4fa37d8821ba53b2874eefacf&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
                     </div>
                 </div><!-- /.footer__contacs -->
             </div><!-- /.footer__contant -->
@@ -566,7 +577,9 @@
                     </nav>
                     <div class="contacts navbar__contacts">
                         <a href="tel:+79997683299" class="phone contacts__phone">+7(999)768-32-99</a>
-                        <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>    
+                        <button class="button contacts__button button--primary"
+                                data-toggle="modal"
+                                data-instance=".modal-callback">Заказать звонок</button>    
                     </div>
                 </div><!-- /.navbar -->
             </div><!-- /.container -->    

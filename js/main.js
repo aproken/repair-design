@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             messages: {
             userName: {
                 required: "Пожалуйста, введите имя",
-                minlength: "Пожалуйста, введите имя не короче двух символов",
+                minlength: "Имя не короче двух символов",
             },
             userPhone: {
                 required: "Пожалуйста, введите телефон",

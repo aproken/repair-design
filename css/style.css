@@ -557,7 +557,7 @@ template {
     align-items: flex-start;
     flex-wrap: wrap; }
   .col-30 {
-    flex-basis: 48%;
+    flex-basis: 100%;
     margin-right: 0.5rem; } }
 
 @media screen and (max-width: 850px) {
@@ -1096,6 +1096,10 @@ img {
   .control__video {
     min-height: 20rem; } }
 
+.map_preload {
+  background: url("../images/map.jpg");
+  background-position: center; }
+
 .types__contant {
   padding-top: 10rem; }
 
@@ -1590,6 +1594,8 @@ img {
       height: 43rem; }
     .footer__text {
       line-height: 1.8rem; }
+    .footer__phone {
+      display: block; }
   .label--dark {
     color: rgba(255, 255, 255, 0.5); }
   .section--empty {
